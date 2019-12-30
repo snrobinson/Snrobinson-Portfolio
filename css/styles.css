@@ -1,0 +1,315 @@
+/* 
+COLOR PALETTE
+https://coolors.co/1c3144-ffba08-a2aebb-3f88c5-ff1b1c
+#FF1B1C - Red
+#3F88C5 - Tufts Blue
+#8D99AE - GRAY-BLUE 
+#FFBA08 - SELECTIVE YELLOW
+#1C3144 - YANKEES BLUE 
+#DBDBDB - GAINSBORO
+#706F6F - NICKEL
+*/
+
+
+/* Global Styles
+------------------------------------*/
+
+html {
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    color: white;
+    background-color: #DBDBDB;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+a:link {
+    color: #FFBA08;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 75px;
+    color: #1C3144;
+}
+
+h3 {
+    clear: both;
+    margin-bottom: 0;
+}
+
+h3,
+p {
+    margin: 0;
+    padding: 5px;
+}
+
+h1,
+h2 {
+    margin: 0;
+    font-family: 'IBM Plex Mono', monospace;
+    line-height: 1.5;
+}
+
+h3+p,
+h3+p+p {
+    font-style: italic;
+}
+
+h3~p {
+    margin: 0;
+}
+
+._projects>.content-wrap>h2,
+._work_experience>.content-wrap>h2 {
+    color: #FFBA08;
+}
+
+.divider>section {
+    border-bottom: 1px dashed #1C3144;
+    padding: 25px 0;
+}
+
+.divider>section:last-of-type {
+    border-style: none;
+}
+
+.btn {
+    background-color: #1C3144;
+    color: #FFBA08;
+    padding: 8px;
+    border-radius: 5px;
+    float: left;
+}
+
+
+/* a:visited {
+	color: #1C3144;
+} */
+
+
+/* Profile
+------------------------------------*/
+
+header {
+    background-color: #E63946;
+    overflow: hidden;
+}
+
+header img {
+    width: 13em;
+    /* float: left; */
+    margin: 0 20px;
+}
+
+header h2 {
+    padding-bottom: 15px;
+}
+
+
+/* ._banner_desc p {
+    float: right;
+} */
+
+
+/* Projects
+------------------------------------*/
+
+._projects {
+    background-color: #8D99AE;
+    background-image: url("../images/karthik-swarnkar-AoNvwL-Dmtw-unsplash.jpg");
+    background-size: cover;
+    background-position-y: top;
+}
+
+._projx {
+    overflow: hidden;
+}
+
+
+/* ._proj_details h3 {
+    display: inline-block;
+} */
+
+._projx img {
+    /* LinkedIn logo */
+    width: 80px;
+    margin: 10px;
+}
+
+.btnB {
+    background-color: #1C3144;
+    color: #FFBA08;
+    padding: 8px;
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+    max-width: 40%;
+}
+
+
+/* ._proj_details {
+    float: left;
+    max-width: 35%;
+}
+
+._proj_desc {
+    float: right;
+    max-width: 65%;
+    text-align: right;
+} */
+
+
+/* Work Experience
+------------------------------------*/
+
+._work_experience {
+    background: #3F88C5;
+    background-image: url("../images/wallpaper1.jpg");
+    background-size: contain;
+    background-blend-mode: darken;
+}
+
+._work_experience img {
+    width: 200px;
+    margin: 5px;
+    overflow: hidden;
+    float: left;
+}
+
+._work_experience .btn:hover {
+    background-color: rgba(28, 49, 68, .75);
+}
+
+._work_experience p {
+    clear: both;
+}
+
+
+/* Education
+------------------------------------*/
+
+._education {
+    background: #8D99AE;
+    color: #1C3144;
+    overflow: auto;
+    background-image: url("../images/sharon-mccutcheon-eMP4sYPJ9x0-unsplash.jpeg");
+    background-size: cover;
+    background-position: center right;
+}
+
+._education img {
+    width: 200px;
+    margin: 5px;
+}
+
+
+/* ._edu_details img {
+    filter: blur(0px);
+    z-index: 9999;
+} */
+
+
+/* Contact
+------------------------------------*/
+
+footer {
+    background: #E63946;
+    clear: both;
+}
+
+._contct_list {
+    list-style-type: none;
+    padding: 0;
+}
+
+._contct_list a {
+    padding: 15px;
+    display: inline-block;
+    color: #1C3144;
+    font-weight: bold;
+}
+
+
+/* Responsive
+------------------------------------*/
+
+@media screen and (min-width:750px) {
+    ._banner_bio,
+    footer,
+    h2 {
+        text-align: center;
+    }
+    ._proj_details {
+        float: left;
+        max-width: 35%;
+    }
+    ._proj_desc {
+        float: right;
+        max-width: 65%;
+        text-align: right;
+    }
+    ._edux {
+        display: grid;
+        grid-template-columns: 1.5fr 3fr;
+        column-gap: 20px;
+    }
+    ._jobx {
+        display: grid;
+        grid-template-columns: 1.3fr 2fr;
+        border-bottom: 1px dashed #1C3144;
+        column-gap: 10px;
+        padding: 25px 0;
+    }
+    ._projects .content-wrap>p {
+        text-align: center;
+    }
+    .content-wrap {
+        max-width: 850px;
+        width: 85%;
+        margin: 0 auto;
+        padding: 65px 0;
+    }
+    ._contct_list {
+        display: flex;
+        justify-content: center;
+    }
+    ._banner_desc {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        column-gap: 20px;
+    }
+}
+
+@media screen and (max-width:749px) {
+    h1 {
+        font-size: 50px;
+    }
+    h1,
+    h2 {
+        line-height: 1;
+    }
+    .content-wrap {
+        max-width: 850px;
+        width: 85%;
+        margin: 0 auto;
+        padding: 85px 0;
+    }
+    ._contct_list a {
+        padding: 1px;
+    }
+}
