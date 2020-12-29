@@ -159,6 +159,8 @@ header h2 {
     display: block;
     text-align: center;
     max-width: 40%;
+    width: fit-content;
+    /* float: left; */
 }
 
 
