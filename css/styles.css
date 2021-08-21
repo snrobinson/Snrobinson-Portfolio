@@ -199,7 +199,7 @@ header h2 {
 
 ._work_experience {
   background-color: #3f88c5;
-  background-image: url("../images/wallpaper1.jpg");
+  /* background-image: url("../images/wallpaper1.jpg"); */
   background-size: contain;
   background-blend-mode: darken;
 }
@@ -327,6 +327,12 @@ footer {
   }
   ._contct_list a {
     padding: 1px;
+  }
+  ._work_experience {
+    background-color: #3f88c5;
+    background-image: url("../images/wallpaper1.jpg");
+    background-size: contain;
+    background-blend-mode: darken;
   }
 }
 
