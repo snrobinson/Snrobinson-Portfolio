@@ -309,6 +309,12 @@ footer {
     grid-template-columns: 1fr 3fr;
     column-gap: 20px;
   }
+  ._work_experience {
+    background-color: #3f88c5;
+    /* background-image: url("../images/wallpaper1.jpg"); */
+    background-size: contain;
+    background-blend-mode: darken;
+  }
 }
 
 @media screen and (max-width: 46.8125em) {
@@ -327,12 +333,6 @@ footer {
   }
   ._contct_list a {
     padding: 1px;
-  }
-  ._work_experience {
-    background-color: #3f88c5;
-    background-image: url("../images/wallpaper1.jpg");
-    background-size: contain;
-    background-blend-mode: darken;
   }
 }
 
