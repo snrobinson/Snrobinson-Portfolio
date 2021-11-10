@@ -5,17 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,600|Open+Sans&display=swap" rel="stylesheet">
+    <script src="/scripts/scripts.js"></script>
     <link href="css/styles.css" rel="stylesheet">
     <title>S.Robinson - IT Professional</title>
 </head>
 
 <body>
     <main role="main">
+        <button onclick="topFunction()" type="button" id="myBtn">Top</button>
         <article>
+            
             <!-- ***********************  ABOUT / PROFILE  *********************** -->
             <header role="banner">
                 <div class="content-wrap">
                     <div class="_banner_bio">
+                        <nav>
+                            <a href="www.snrobinson.com">Home</a>
+                            <a href="/index.html#_projects">Projects</a>
+                            <a href="/index.html#_experience">Experience</a>
+                            <a href="/index.html#_credentials">Credentials</a>
+                            <a href="https://www.robinfits.com">Robinfits</a>
+                            <a href="https://www.robintechconsulting.com">RobinTech</a>
+                        </nav>
                         <h1>Stephen Robinson</h1>
                         <h2>Business Analyst &#43; Developer &#43; IT Professional</h2>
                     </div>
@@ -33,7 +44,7 @@
             </header>
 
             <!-- ********************  PROJECTS / PORTFOLIO  ********************* -->
-            <section class="_projects">
+            <section class="_projects" id="_projects">
                 <div class="content-wrap divider">
                     <h2>Currently working on</h2>
                     <!-- <p>View selected projects below. More information can be found at <a href="http://snrobinson.com" target="_blank">snrobinson.com</a>.</p> -->
@@ -84,7 +95,7 @@
             </section>
 
             <!-- ***********************  WORK EXPERIENCE  *********************** -->
-            <section class="_work_experience">
+            <section class="_work_experience" id="_experience">
                 <div class="content-wrap divider">
                     <h2>Work Experience</h2>
                     <!-- Job 1 -->
@@ -170,7 +181,7 @@
             </section>
 
             <!-- ******************  EDUCATION & CERTIFICATIONS ****************** -->
-            <section class="_education">
+            <section class="_education" id="_credentials">
                 <div class="content-wrap divider">
                     <h2>Education &#38; Certifications</h2>
 
