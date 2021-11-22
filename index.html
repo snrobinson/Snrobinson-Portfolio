@@ -7,6 +7,8 @@
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,600|Open+Sans&display=swap" rel="stylesheet">
     <script src="/scripts/scripts.js"></script>
     <link href="css/styles.css" rel="stylesheet">
+    <!-- Below line Loads a icon library used for the hamburger menu icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
     <title>S.Robinson - IT Professional</title>
 </head>
 
@@ -19,13 +21,16 @@
             <header role="banner">
                 <div class="content-wrap">
                     <div class="_banner_bio">
-                        <nav>
-                            <a href="www.snrobinson.com">Home</a>
+                        <nav class="topnav" id="myTopnav">
+                            <a href="www.snrobinson.com" class="active">Home</a>
                             <a href="/index.html#_projects">Projects</a>
                             <a href="/index.html#_experience">Experience</a>
                             <a href="/index.html#_credentials">Credentials</a>
                             <a href="https://www.robinfits.com">Robinfits</a>
                             <a href="https://www.robintechconsulting.com">RobinTech</a>
+                            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                                <i class="fa fa-bars"></i>
+                            </a>
                         </nav>
                         <h1>Stephen Robinson</h1>
                         <h2>Business Analyst &#43; Developer &#43; IT Professional</h2>
