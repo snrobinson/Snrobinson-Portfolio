@@ -83,7 +83,7 @@ h3 ~ p {
   text-decoration: none;
   display: inline-block;
   padding: 1em;
-  color: #e8f1f2; /* #f2f2f2 & e8f1f2 */
+  color: #ffba08; /* #ffba08 & e8f1f2 */
 }
 
 .topnav li {
@@ -93,14 +93,14 @@ h3 ~ p {
 }
 
 .topnav a:hover {
-  background-color: #d3dae0;
+  background-color: #ffba08;
   text-decoration: none;
   color: black;
 }
 
-.topnav a:visited {
-  color: #e8f1f2;
-}
+/* .topnav a:visited {
+  color: #ffba08;
+} */
 
 .topnav .icon {
   display: none;
