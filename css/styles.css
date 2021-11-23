@@ -40,7 +40,7 @@ a:hover {
   text-decoration: none;
 }
 
-h1 {
+.title-name {
   font-weight: 700;
   font-size: 75px;
   color: #1c3144;
@@ -139,10 +139,10 @@ header {
   overflow: hidden;
 }
 
-header img {
-  width: 13em;
-  /* float: left; */
-  margin: 0 20px;
+.banner-img {
+  width: 25em;
+  display: block;
+  margin: 5em auto;
 }
 
 header h2 {
@@ -289,6 +289,14 @@ footer {
   display: inline-block;
   color: #1c3144;
   font-weight: bold;
+}
+
+.title-name {
+  margin: 0.25em auto;
+}
+
+.title-title {
+  margin: 5px auto;
 }
 
 /* Responsive
