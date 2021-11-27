@@ -23,15 +23,16 @@
                     <div class="_banner_bio">
                         <nav class="topnav" id="myTopnav">
                             <a href="/index.html" class="active">Home</a>
-                        <a href="about.html">About</a>
-                        <a href="/index.html#_projects">Projects</a>
-                        <a href="experience.html">Experience</a>
-                        <!-- <a href="/index.html#_credentials">Credentials</a> -->
-                        <a href="https://www.robintechconsulting.com">RobinTech</a>
-                        <a href="https://www.robinfits.com">Robinfits</a>
-                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                            <i class="fa fa-bars"></i>
-                        </a>
+                            <a href="about.html">About</a>
+                            <a href="about.html#_projects">Projects</a>
+                            <a href="experience.html">Experience</a>
+                            <!-- <a href="/index.html#_credentials">Credentials</a> -->
+                            <a href="#">RobinTech</a>
+                            <a href="https://www.robinfits.com">Robinfits</a>
+                            <a href="about.html#_contact">Contact</a>
+                            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                                <i class="fa fa-bars"></i>
+                            </a>
                         </nav>
                         <div class="_banner_bio">
                             <h1 class="title-name">Stephen Robinson</h1>
@@ -50,70 +51,118 @@
                 </div>
             </header>
 
-            <!-- ******************  EDUCATION & CERTIFICATIONS ****************** -->
-            <section class="_education" id="_credentials">
+            <!-- Slideshow -->
+            <div class="slideshow" id="_slideshow">
+                <!-- Slideshow container -->
+                <div class="slideshow-container">
+
+                    <!-- Full-width images with number and caption text -->
+                    <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="/images/About-Slideshow/_1610470.JPG" class="slide-img" >
+                    <div class="text">Caption Text</div>
+                    </div>
+                
+                    <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="/images/About-Slideshow/IMG_1721.jpeg" class="slide-img" >
+                    <div class="text">Caption Two</div>
+                    </div>
+                
+                    <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="/images/About-Slideshow/IMG_0975.jpeg" class="slide-img" >
+                    <div class="text">Caption Three</div>
+                    </div>
+                
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+                
+                <!-- The dots/circles -->
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+
+            <!-- ********************  PROJECTS / PORTFOLIO  ********************* -->
+            <section class="_projects" id="_projects">
                 <div class="content-wrap divider">
-                    <h2>Education &#38; Certifications</h2>
+                    <h2>Currently working on</h2>
+                    <!-- <p>View selected projects below. More information can be found at <a href="http://snrobinson.com" target="_blank">snrobinson.com</a>.</p> -->
 
-                    <!-- Education 1 -->
-                    <section class="_edux">
-                        <div class="_edu_details">
-                            <img src="/images/USFLogo2.jpg" alt="USF logo">
+                    <!-- Project 1 -->
+                    <section class="_projx">
+                        <div class="_proj_details">
+                            <h3>OPEN TO WORK</h3>
+                            <!-- <img src="images/LI-In-Bug.png" alt="LinkedIn small logo"> -->
+                            <a class="btnB" href="https://www.dropbox.com/s/d5b183t3v5i8g4x/Stephen%20Robinson%20-%20Resume.pdf?dl=0" target="_blank">Resume</a>
                         </div>
-                        <div class="_edu_desc">
-                            <h3>University of South Florida - Tampa, FL</h3>
-                            <p>Bachelor of Science in Information Technology, Class of 2017</p>
-                            <p>Member of the National Society for Black Engineers, Progressive Black Men Inc., and the Microsoft Developer Network</p>
+                        <div class="_proj_desc">
+                            <p>Currently open to career opportunities as a <strong class="bold-currently-about">Software Engineer, Project/Product Manager, or Techinical Business Analyst.</strong></p>
                         </div>
-
                     </section>
-                    <!-- End of School block. -->
-                    <!-- Education 2 -->
-                    <section class="_edux">
-                        <div class="_edu_details">
-                            <p>
-                                <p style="float: right;">&#8482;</p><img src="/images/CloudPlus Logo Certified CE.png" alt="CompTIA Cloud+ logo"></p>
+                    <!-- End of Project block. -->
+
+                    <!-- Project 2 -->
+                    <section class="_projx">
+                        <div class="_proj_details">
+                            <h3>Project Management Institute - Certified Associate in Project Management (CAPM)</h3>
+                            <img src="/images/PMI.png" alt="PMI CAPM small logo">
+                            <a class="btnB" href="https://www.pmi.org/certifications/certified-associate-capm" target="_blank">View</a>
                         </div>
-                        <div class="_edu_desc">
-                            <h3>CompTIA - Cloud+</h3>
-                            <p>Candidate ID: COMP001021779488 - Exp Date: 1/11/2024</p>
-                            <p>Earners of the CompTIA Cloud+ certification have the knowledge and expertise needed to configure, deploy, maintain, and optimize cloud infrastructure services. These IT professionals have demonstrated the ability to incorporate
-                                and manage cloud technologies and weave together solutions that meet specific business needs.
+                        <div class="_proj_desc">
+                            <p>Certified Associate in Project Management is an internationally recognized professional designation offered by the Project Management Institute.</p>
+                        </div>
+                    </section>
+
+                    <!-- Project 3 -->
+                    <section class="_projx">
+                        <div class="_proj_details">
+                            <h3>Six Sigma Green Belt</h3>
+                            <!-- <img src="images/LI-In-Bug.png" alt="LinkedIn small logo"> -->
+                            <a class="btnB" href="https://www.sixsigmacouncil.org/six-sigma-green-belt-certification/" target="_blank">View</a>
+                        </div>
+                        <div class="_proj_desc">
+                            <p>As a certified Six Sigma Green belt, this will demonstrate an understanding of enhanced problem solving skills as it relates to the DMAIC (Define, Measure, Analyze, Improve and Control) model.
                             </p>
                         </div>
-
                     </section>
-                    <!-- End of School block. -->
-                    <!-- Education 3 -->
-                    <section class="_edux">
-                        <div class="_edu_details">
-                            <p>
-                                <p style="float: right;">&#8482;</p><img src="/images/AWS-SolArchitect-Associate-2020.png" alt="AWS Certified Solutions Architect - Associate logo"></p>
-                        </div>
-                        <div class="_edu_desc">
-                            <h3>AWS Certified Solutions Architect - Associate</h3>
-                            <p>Validation Number: L5E99DDDE2FE18KH - Exp Date: 11/8/2024</p>
-                            <p>Earners of this certification have a comprehensive understanding of AWS services and technologies. They demonstrated the ability to build secure and robust solutions using architectural design principles based on customer requirements. Badge owners are able to strategically design well-architected distributed systems that are scalable, resilient, efficient, and fault-tolerant.</p>
-                        </div>
 
+                    <!-- Project 4 -->
+                    <section class="_projx">
+                        <div class="_proj_details">
+                            <h3>RobinTech IT Solutions and Consulting</h3>
+                            <img src="/images/jpg-04.jpg" alt="RobinTech small logo">
+                            <a class="btnB" href="https://robintechconsulting.com/" target="_blank">robintechconsulting.com</a>
+                        </div>
+                        <div class="_proj_desc">
+                            <p>Technology, implemented correctly can solve problems previously thought impossible. RobinTech IT Solutions & Consulting aims to offer professional services, consulting, and educational material that will bridge the gap between technology and people.</i>.</p>
+                        </div>
                     </section>
-                    <!-- End of School block. -->
+
+                   
                 </div>
             </section>
         </article>
         <!-- *****************  CONTACT INFO / SOCIAL MEDIA  ***************** -->
-        <footer role="contentinfo" class="_contact">
+        <footer role="contentinfo" class="_contact" id="_contact">
             <div class="content-wrap">
                 <h2>Let's Keep in Touch!</h2>
 
                 <!-- Social media and contact links -->
                 <ul class="_contct_list">
-                    <li><a href="mailto:snrobinson94@gmail.com">snrobinson94@gmail.com</a></li>
-                    <li><a href="https://snrobinson.com" target="_blank">snrobinson.com</a></li>
-                    <li><a href="https://twitter.com/Robinson_S0126" target="_blank" class="">Twitter</a></li>
-                    <li><a href="https://www.linkedin.com/in/stephen-robinson-877ab46b/" target="_blank">LinkedIn</a>
+                    <li><a href="mailto:snrobinson94@gmail.com" class="fa fa-envelope"></a></li>
+                    <li><a href="http://snrobinson.com" target="_blank" class="fa fa-home"></a></li>
+                    <li><a href="https://github.com/snrobinson" target="_blank" class="fa fa-code"></a></li>
+                    <li><a href="https://www.linkedin.com/in/stephen-robinson-877ab46b/" target="_blank" class="fa fa-linkedin"></a>
+                    <li><a href="https://twitter.com/Robinson_S0126" target="_blank" class="fa fa-twitter"></a></li>
                     </li>
-                    <li><a href="https://www.facebook.com/srobinson561" target="_blank">Facebook</a></li>
+                    <li><a href="https://www.facebook.com/srobinson561" target="_blank" class="fa fa-facebook"></a></li>
                 </ul>
             </div>
         </footer>
