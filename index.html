@@ -1,178 +1,431 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,600|Open+Sans&display=swap" rel="stylesheet">
-    <script src="scripts/scripts.js"></script>
+    <meta name="description" content="Stephen Robinson - Project Manager, Entrepreneur & IT Professional specializing in Business Analysis, Cloud Architecture, and Technical Solutions">
+    <title>Stephen Robinson | IT Professional & Project Manager</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
     <link href="css/styles.css" rel="stylesheet">
-    <!-- Below line Loads a icon library used for the hamburger menu icon-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
-    <title>Stephen Robinson - IT Professional</title>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 <body>
-    <main role="main">
-        <button onclick="topFunction()" type="button" id="myBtn">Top</button>
-        <article>
-            
-            <!-- ***********************  ABOUT / PROFILE  *********************** -->
-            <header role="banner">
-                <div class="content-wrap">
-                    <nav class="topnav" id="myTopnav">
-                        <a href="index.html" class="fa fa-home"></a>
-                        <a href="html/about.html">About</a>
-                        <a href="index.html#_projects">Projects</a>
-                        <a href="html/experience.html">Experience</a>
-                        <!-- <a href="/index.html#_credentials">Credentials</a> -->
-                        <a href="#">RobinTech</a>
-                        <a href="https://www.robinfits.com">Robinfits</a>
-                        <a href="index.html#_contact">Contact</a>
-                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                            <i class="fa fa-bars"></i>
-                        </a>
-                    </nav>
-                    <div class="_banner_bio">
-                        <h1 class="title-name">Stephen Robinson</h1>
-                        <h2 class="title-title">Project Manager &#43; Entrepreneur &#43; IT Professional</h2>
-                    </div>
-                    <img src="images/STEPHEN-ROBINSON2.JPG" alt="Stephen Robinson Headshot" class="banner-img">
-                    <div class="">
-                        <h2>Stephen Robinson</h2>
-                        <p>Hello and welcome to my portfolio website! As you may have noticed above, my name is Stephen Robinson (pronounced Steven btw) and I am an Information Technology Professional. Under that umbrella includes, Business Analyst, Web Developer, Project Manager, and Consultant. I'd like to think of myself as somewhat of "jack-of-all-trades".<br><br>My passion is all things technology and more specifically, using it to connect and help people. As Matt Mullenweg, Social Media Entrepreneur once said: </p>
-                        <blockquote><i>"Technology is best when it brings people together"</i></blockquote>
-                    </div>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">SR</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#credentials" class="nav-link">Credentials</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-                    <iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=48&l=ur1&category=software&banner=0KDMJWCGK578JSWZRDG2&f=ifr&linkID=1f0919703a18a9c2cfd8741eca4f24c2&t=snrobinson561-20&tracking_id=snrobinson561-20" width="728" height="90" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="hero-greeting">Hello, I'm</span>
+                    <span class="hero-name">Stephen Robinson</span>
+                </h1>
+                <p class="hero-subtitle">Project Manager • Entrepreneur • IT Professional</p>
+                <p class="hero-description">
+                    Transforming complex challenges into innovative solutions through technology,
+                    strategic thinking, and a passion for connecting people.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
                 </div>
-            </header>
-
-            <!-- ********************  PROJECTS / PORTFOLIO  ********************* -->
-            <section class="_projects" id="_projects">
-                <div class="content-wrap divider">
-                    <h2>Currently working on</h2>
-                    <!-- <p>View selected projects below. More information can be found at <a href="http://snrobinson.com" target="_blank">snrobinson.com</a>.</p> -->
-
-                    <!-- Project 1 -->
-                    <section class="_projx">
-                        <div class="_proj_details">
-                            <h3>Project Management Institute - Certified Associate in Project Management (CAPM)</h3>
-                            <img src="images/PMI.png" alt="PMI CAPM small logo">
-                            <a class="btnB" href="https://www.pmi.org/certifications/certified-associate-capm" target="_blank">View</a>
-                        </div>
-                        <div class="_proj_desc">
-                            <p>Certified Associate in Project Management is an internationally recognized professional designation offered by the Project Management Institute.</p>
-                        </div>
-                    </section>
-
-                    <!-- Project 2 -->
-                    <section class="_projx">
-                        <div class="_proj_details">
-                            <h3>Six Sigma Green Belt</h3>
-                            <!-- <img src="images/LI-In-Bug.png" alt="LinkedIn small logo"> -->
-                            <a class="btnB" href="https://www.sixsigmacouncil.org/six-sigma-green-belt-certification/" target="_blank">View</a>
-                        </div>
-                        <div class="_proj_desc">
-                            <p>As a certified Six Sigma Green belt, this will demonstrate an understanding of enhanced problem solving skills as it relates to the DMAIC (Define, Measure, Analyze, Improve and Control) model.
-                            </p>
-                        </div>
-                    </section>
-
-                    <!-- Project 3 -->
-                    <section class="_projx">
-                        <div class="_proj_details">
-                            <h3>RobinTech IT Solutions and Consulting</h3>
-                            <!-- <img src="images/LI-In-Bug.png" alt="LinkedIn small logo"> -->
-                            <a class="btnB" href="https://robintechconsulting.com/" target="_blank">robintechconsulting.com</a>
-                        </div>
-                        <div class="_proj_desc">
-                            <p>Coming Soon...</p>
-                        </div>
-                    </section>
-                    <!-- End of Project block. -->
-                </div>
-
-
-
-
-
-            </section>
-
-
-
-            <!-- ******************  EDUCATION & CERTIFICATIONS ****************** -->
-            <section class="_education" id="_credentials">
-                <div class="content-wrap divider">
-                    <h2>Education &#38; Certifications</h2>
-
-                    <!-- Education 1 -->
-                    <section class="_edux">
-                        <div class="_edu_details">
-                            <img src="images/USFLogo2.jpg" alt="USF logo">
-                        </div>
-                        <div class="_edu_desc">
-                            <h3>University of South Florida - Tampa, FL</h3>
-                            <p>Bachelor of Science in Information Technology, Class of 2017</p>
-                            <p>Member of the National Society for Black Engineers, Progressive Black Men Inc., and the Microsoft Developer Network</p>
-                        </div>
-
-                    </section>
-                    <!-- End of School block. -->
-                    <!-- Education 2 -->
-                    <section class="_edux">
-                        <div class="_edu_details">
-                            <p>
-                                <p style="float: right;">&#8482;</p><img src="images/CloudPlus Logo Certified CE.png" alt="CompTIA Cloud+ logo"></p>
-                        </div>
-                        <div class="_edu_desc">
-                            <h3>CompTIA - Cloud+</h3>
-                            <p>Candidate ID: COMP001021779488 - Exp Date: 1/11/2024</p>
-                            <p>Earners of the CompTIA Cloud+ certification have the knowledge and expertise needed to configure, deploy, maintain, and optimize cloud infrastructure services. These IT professionals have demonstrated the ability to incorporate
-                                and manage cloud technologies and weave together solutions that meet specific business needs.
-                            </p>
-                        </div>
-
-                    </section>
-                    <!-- End of School block. -->
-                    <!-- Education 3 -->
-                    <section class="_edux">
-                        <div class="_edu_details">
-                            <p>
-                                <p style="float: right;">&#8482;</p><img src="images/AWS-SolArchitect-Associate-2020.png" alt="AWS Certified Solutions Architect - Associate logo"></p>
-                        </div>
-                        <div class="_edu_desc">
-                            <h3>AWS Certified Solutions Architect - Associate</h3>
-                            <p>Validation Number: L5E99DDDE2FE18KH - Exp Date: 11/8/2024</p>
-                            <p>Earners of this certification have a comprehensive understanding of AWS services and technologies. They demonstrated the ability to build secure and robust solutions using architectural design principles based on customer requirements. Badge owners are able to strategically design well-architected distributed systems that are scalable, resilient, efficient, and fault-tolerant.</p>
-                        </div>
-
-                    </section>
-                    <!-- End of School block. -->
-                </div>
-            </section>
-        </article>
-        <!-- *****************  CONTACT INFO / SOCIAL MEDIA  ***************** -->
-        <footer role="contentinfo" class="_contact" id="_contact">
-            <div class="content-wrap">
-                <h2>Let's Keep in Touch!</h2>
-
-                <!-- Social media and contact links -->
-                <ul class="_contct_list">
-                    <li><a href="tel:213-246-7400" class="fa fa-phone"></a></li>
-                    <li><a href="mailto:snrobinson94@gmail.com" class="fa fa-envelope"></a></li>
-                    <li><a href="http://snrobinson.com" target="_blank" class="fa fa-home"></a></li>
-                    <li><a href="https://github.com/snrobinson" target="_blank" class="fa fa-code"></a></li>
-                    <li><a href="https://www.linkedin.com/in/stephen-robinson-877ab46b/" target="_blank" class="fa fa-linkedin"></a>
-                    <!-- <li><a href="https://twitter.com/Robinson_S0126" target="_blank" class="fa fa-twitter"></a></li> -->
-                    </li>
-                    <!-- <li><a href="https://www.facebook.com/srobinson561" target="_blank" class="fa fa-facebook"></a></li> -->
-                </ul>
             </div>
-            <p class="bottom-text">Designed by: Stephen Robinson</p>
-        </footer>
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <img src="images/STEPHEN-ROBINSON2.JPG" alt="Stephen Robinson" loading="eager">
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
 
-    </main>
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Who I Am</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="lead-text">
+                        For as long as I can remember, my passion and love for technology has always been there.
+                        There wasn't a piece of electronics in the house that I didn't want to take apart and
+                        examine how it works.
+                    </p>
+                    <p>
+                        With nearly eight years of experience in IT, I've worked with companies ranging from
+                        50 to 1000+ employees. This exposure has given me expertise in requirements gathering,
+                        data analysis, server & application management, process improvement, and software configuration.
+                    </p>
+                    <p>
+                        I hold a Bachelor of Science in Information Technology from the University of South Florida
+                        and am currently pursuing a Master of Artificial Intelligence from Penn State University.
+                        My academic foundation spans web development, database management, network &amp; server
+                        management, business analysis, and software development.
+                    </p>
+                    <blockquote class="quote">
+                        "Technology is best when it brings people together"
+                        <cite>— Matt Mullenweg</cite>
+                    </blockquote>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">8+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">4</div>
+                        <div class="stat-label">Certifications</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">My Journey</span>
+                <h2 class="section-title">Work Experience</h2>
+            </div>
+
+            <div class="timeline">
+                <!-- Experience 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="experience-header">
+                            <div>
+                                <h3>Technical Business Systems Analyst</h3>
+                                <p class="company">NBCUniversal</p>
+                            </div>
+                            <span class="period">Sep 2019 - Present</span>
+                        </div>
+                        <ul class="experience-list">
+                            <li>Plan and coordinate deployment of cloud SaaS applications and server instances</li>
+                            <li>Maintain Development, QA, and Staging environments for application suite</li>
+                            <li>Create and deploy data models and dashboards for business intelligence</li>
+                            <li>Lead business continuity planning and execution efforts</li>
+                            <li>Monitor and troubleshoot network, application, and infrastructure issues</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="experience-header">
+                            <div>
+                                <h3>Process Improvement Consultant</h3>
+                                <p class="company">DocuPhase</p>
+                            </div>
+                            <span class="period">Oct 2018 - Sep 2019</span>
+                        </div>
+                        <ul class="experience-list">
+                            <li>Review business requirements and create workflow models for enterprise functions</li>
+                            <li>Provide strategic direction on design and deployment approach</li>
+                            <li>Identify control and risk mitigation opportunities using root cause analysis</li>
+                            <li>Manage performance tests utilizing SQL and front-end technologies</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="experience-header">
+                            <div>
+                                <h3>Business Analyst</h3>
+                                <p class="company">Fairfax Imaging</p>
+                            </div>
+                            <span class="period">Aug 2016 - Oct 2018</span>
+                        </div>
+                        <ul class="experience-list">
+                            <li>Analyze and synthesize technical requirements for client solutions</li>
+                            <li>Develop custom code in C#, SQL, .NET, and HTML5</li>
+                            <li>Write SQL queries and lookups for solution customization</li>
+                            <li>Resolve technical issues and communicate project information effectively</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="experience-header">
+                            <div>
+                                <h3>IT Service Desk Technician</h3>
+                                <p class="company">USF IT Service Desk</p>
+                            </div>
+                            <span class="period">Oct 2014 - Jan 2016</span>
+                        </div>
+                        <ul class="experience-list">
+                            <li>Provided first-level support for University systems via multiple channels</li>
+                            <li>Troubleshot and resolved technical issues for students, staff, and faculty</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">What I'm Building</span>
+                <h2 class="section-title">Current Projects</h2>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card featured">
+                    <div class="project-content">
+                        <span class="project-status">Available</span>
+                        <h3>Open to New Opportunities</h3>
+                        <p>
+                            Currently seeking roles as a Software Engineer, Project/Product Manager,
+                            or Senior Technical Business Analyst.
+                        </p>
+                        <a href="https://www.dropbox.com/s/d5b183t3v5i8g4x/Stephen%20Robinson%20-%20Resume.pdf?dl=0"
+                           class="project-link" target="_blank" rel="noopener">
+                            View Resume <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-status">In Progress</span>
+                        <h3>PMI CAPM Certification</h3>
+                        <p>
+                            Pursuing Certified Associate in Project Management, an internationally
+                            recognized professional designation from PMI.
+                        </p>
+                        <a href="https://www.pmi.org/certifications/certified-associate-capm"
+                           class="project-link" target="_blank" rel="noopener">
+                            Learn More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-status">In Progress</span>
+                        <h3>Six Sigma Green Belt</h3>
+                        <p>
+                            Demonstrating enhanced problem-solving skills using the DMAIC
+                            (Define, Measure, Analyze, Improve, Control) model.
+                        </p>
+                        <a href="https://www.sixsigmacouncil.org/six-sigma-green-belt-certification/"
+                           class="project-link" target="_blank" rel="noopener">
+                            Learn More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-status">Active</span>
+                        <h3>RobinTech Consulting</h3>
+                        <p>
+                            Technology solutions and consulting services that bridge the gap
+                            between technology and people.
+                        </p>
+                        <a href="https://robintechconsulting.com/"
+                           class="project-link" target="_blank" rel="noopener">
+                            Visit Site <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Credentials Section -->
+    <section class="credentials" id="credentials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Qualifications</span>
+                <h2 class="section-title">Education & Certifications</h2>
+            </div>
+
+            <div class="credentials-grid">
+                <!-- Education 1 -->
+                <div class="credential-card">
+                    <div class="credential-icon education">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>University of South Florida</h3>
+                    <p class="credential-title">Bachelor of Science in Information Technology</p>
+                    <p class="credential-year">Class of 2017 • Tampa, FL</p>
+                    <p class="credential-details">
+                        Member of National Society for Black Engineers, Progressive Black Men Inc.,
+                        and Microsoft Developer Network
+                    </p>
+                </div>
+
+                <!-- Education 2 (In Progress) -->
+                <div class="credential-card">
+                    <div class="credential-icon education">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Penn State University</h3>
+                    <p class="credential-title">Master of Artificial Intelligence <span class="credential-in-progress">In Progress</span></p>
+                    <p class="credential-year">Anticipated Spring 2028 • Online</p>
+                    <p class="credential-details">
+                        Graduate program focused on AI systems, machine learning, and intelligent
+                        application development.
+                    </p>
+                </div>
+
+                <!-- Cert 1 -->
+                <div class="credential-card">
+                    <div class="credential-icon cert">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>CompTIA Cloud+</h3>
+                    <p class="credential-title">Cloud Infrastructure Specialist</p>
+                    <p class="credential-year">Expires: Jan 2027</p>
+                    <p class="credential-details">
+                        Expertise in configuring, deploying, maintaining, and optimizing cloud
+                        infrastructure services.
+                    </p>
+                </div>
+
+                <!-- Cert 2 -->
+                <div class="credential-card">
+                    <div class="credential-icon cert">
+                        <i class="fas fa-users-gear"></i>
+                    </div>
+                    <h3>Certified Scrum Master</h3>
+                    <p class="credential-title">Agile Project Management</p>
+                    <p class="credential-year">Expires: Apr 2027</p>
+                    <p class="credential-details">
+                        Skilled in facilitating Scrum ceremonies, removing impediments, and
+                        enabling high-performing agile teams.
+                    </p>
+                </div>
+
+                <!-- Cert 3 (Expired) -->
+                <div class="credential-card">
+                    <div class="credential-icon cert">
+                        <i class="fab fa-aws"></i>
+                    </div>
+                    <h3>AWS Solutions Architect <span class="credential-expired">Expired</span></h3>
+                    <p class="credential-title">Associate Level</p>
+                    <p class="credential-year">Expired: Nov 2024</p>
+                    <p class="credential-details">
+                        Ability to design secure, scalable, resilient, and efficient distributed
+                        systems using AWS services.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Let's Connect</h2>
+                    <p class="lead-text">
+                        I'm always interested in hearing about new opportunities, collaborations,
+                        or just connecting with fellow tech enthusiasts.
+                    </p>
+                    <div class="contact-methods">
+                        <a href="mailto:snrobinson94@gmail.com" class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <span>snrobinson94@gmail.com</span>
+                        </a>
+                        <a href="tel:213-246-7400" class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <span>(213) 246-7400</span>
+                        </a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/stephen-robinson-877ab46b/"
+                           target="_blank" rel="noopener" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/snrobinson"
+                           target="_blank" rel="noopener" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="http://snrobinson.com"
+                           target="_blank" rel="noopener" aria-label="Website">
+                            <i class="fas fa-globe"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Stephen Robinson. Designed with passion for technology.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="scripts/scripts.js"></script>
 </body>
-
 </html>

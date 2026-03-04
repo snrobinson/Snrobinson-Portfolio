@@ -779,6 +779,34 @@ section {
   line-height: 1.6;
 }
 
+.credential-expired {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: #dc3545;
+  color: #fff;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-full);
+  vertical-align: middle;
+  margin-left: 0.4rem;
+}
+
+.credential-in-progress {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: var(--color-accent);
+  color: var(--color-dark);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-full);
+  vertical-align: middle;
+  margin-left: 0.4rem;
+}
+
 /* ===================================
    CONTACT SECTION
    =================================== */
