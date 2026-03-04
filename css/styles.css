@@ -49,6 +49,8 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 72px;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -58,6 +60,7 @@ body {
   color: var(--color-text);
   background: var(--color-white);
   overflow-x: hidden;
+  overflow-wrap: break-word;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -885,6 +888,8 @@ section {
     --spacing-xl: 5rem;
   }
 
+  body { font-size: 16px; }
+
   .hero-content {
     grid-template-columns: 1fr;
     text-align: center;
@@ -897,6 +902,10 @@ section {
 
   .hero-description { margin: 0 auto var(--spacing-md); }
 
+  .image-wrapper { max-width: 300px; }
+
+  .lead-text { font-size: 1.05rem; }
+
   .about-content { grid-template-columns: 1fr; }
 
   .about-stats {
@@ -906,13 +915,26 @@ section {
 
   .stat-card { flex: 1 1 140px; }
 
+  .container, .hero-content { max-width: 100%; overflow: hidden; }
+
+  .about-text, .about-content, .contact-content { max-width: 100%; }
+
+  .timeline { max-width: 100%; }
   .timeline::before { left: 5px; }
-  .timeline-item { padding-left: 38px; }
+  .timeline-item { padding-left: 38px; min-width: 0; }
   .timeline-marker { left: 0; width: 12px; height: 12px; }
+
+  .timeline-content { padding: 1.25rem; overflow: hidden; }
 
   .experience-header { flex-direction: column; gap: 0.5rem; }
 
+  .experience-list li { font-size: 0.9rem; }
+
+  .projects-grid { grid-template-columns: 1fr; }
+
   .project-card.featured { grid-column: span 1; }
+
+  .credentials-grid { grid-template-columns: 1fr; }
 
   .nav-menu {
     position: fixed;
@@ -954,7 +976,7 @@ section {
 }
 
 @media (max-width: 480px) {
-  .credentials-grid { grid-template-columns: 1fr; }
+  :root { --spacing-md: 1.5rem; }
   .back-to-top { bottom: 20px; right: 20px; }
 }
 
