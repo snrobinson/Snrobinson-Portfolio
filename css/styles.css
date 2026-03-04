@@ -15,6 +15,7 @@
   --color-border: #E2E8F0;
 
   --font-display: 'Syne', sans-serif;
+  --font-name: 'Clash Display', sans-serif;
   --font-body: 'DM Sans', sans-serif;
 
   --spacing-xs: 0.5rem;
@@ -188,9 +189,9 @@ section {
 }
 
 .nav-logo {
-  font-family: var(--font-display);
+  font-family: var(--font-name);
   font-size: 1.25rem;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--color-accent);
   letter-spacing: -0.03em;
 }
@@ -263,7 +264,8 @@ section {
 
 .hero-name {
   display: block;
-  font-weight: 800;
+  font-family: var(--font-name);
+  font-weight: 700;
   color: var(--color-text);
   letter-spacing: -0.03em;
   line-height: 1.05;
