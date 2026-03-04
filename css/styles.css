@@ -904,6 +904,8 @@ section {
 
   .image-wrapper { max-width: 300px; }
 
+  .scroll-indicator { display: none; }
+
   .lead-text { font-size: 1.05rem; }
 
   .about-content { grid-template-columns: 1fr; }
