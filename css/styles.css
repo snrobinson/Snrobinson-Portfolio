@@ -399,6 +399,16 @@ a:hover {
     line-height: 1.6;
 }
 
+a.project-card-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+a.project-card-link:hover {
+    color: inherit;
+}
+
 /* About
 ------------------------------------*/
 
