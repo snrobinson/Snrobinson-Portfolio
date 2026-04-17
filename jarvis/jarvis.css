@@ -1,0 +1,360 @@
+/* ===========================================
+   JARVIS PAGE — extends main design system
+   =========================================== */
+
+/* Hero
+------------------------------------*/
+
+.jarvis-hero {
+    padding: 140px 0 100px;
+    background: var(--navy);
+    overflow: hidden;
+    position: relative;
+}
+
+.jarvis-hero::before {
+    content: '';
+    position: absolute;
+    top: -160px;
+    right: -160px;
+    width: 520px;
+    height: 520px;
+    background: radial-gradient(circle, rgba(59,130,246,0.12) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.jarvis-hero-inner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 60px;
+    align-items: center;
+}
+
+.jarvis-hero-content .hero-label {
+    color: var(--accent-light);
+}
+
+.jarvis-hero-content .hero-title {
+    color: var(--white);
+    font-size: 64px;
+    letter-spacing: -2px;
+}
+
+.jarvis-hero-content .hero-tagline {
+    color: var(--accent-light);
+    font-weight: 600;
+    font-size: 22px;
+    margin-bottom: 16px;
+}
+
+.jarvis-hero-content .hero-subtitle {
+    color: var(--slate-400);
+    max-width: 560px;
+}
+
+.jarvis-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 28px;
+}
+
+.jarvis-badge {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--accent-light);
+    background: rgba(59, 130, 246, 0.12);
+    border: 1px solid rgba(59, 130, 246, 0.25);
+    padding: 5px 12px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+.jarvis-hero-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.jarvis-icon-ring {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1.5px solid rgba(59, 130, 246, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 56px;
+    color: var(--accent-light);
+    box-shadow: 0 0 60px rgba(59, 130, 246, 0.15);
+}
+
+/* Overview
+------------------------------------*/
+
+.jarvis-overview {
+    padding: 100px 0;
+    background: var(--slate-100);
+}
+
+.jarvis-overview-inner {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.jarvis-body {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--slate-700);
+    margin-bottom: 16px;
+}
+
+.jarvis-overview-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 80px;
+}
+
+.jarvis-stat {
+    padding: 24px;
+    background: var(--white);
+    border-radius: var(--radius);
+    border-left: 3px solid var(--accent);
+    box-shadow: var(--shadow-sm);
+}
+
+.jarvis-stat-number {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.jarvis-stat-label {
+    font-size: 14px;
+    color: var(--slate-500);
+}
+
+/* Capabilities
+------------------------------------*/
+
+.jarvis-capabilities {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.jarvis-cap-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* Make last row center if odd number of cards */
+.jarvis-cap-grid .jarvis-cap-card:last-child:nth-child(3n - 1) {
+    grid-column: 2;
+}
+
+.jarvis-cap-card {
+    background: var(--white);
+    border: 1px solid var(--slate-200);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    transition: all var(--transition);
+}
+
+.jarvis-cap-card:hover {
+    box-shadow: var(--shadow-lg);
+    border-color: transparent;
+    transform: translateY(-2px);
+}
+
+.jarvis-cap-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius);
+    background: var(--accent-subtle);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    color: var(--accent);
+    font-size: 20px;
+}
+
+.jarvis-cap-card h3 {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 8px;
+}
+
+.jarvis-cap-card p {
+    font-size: 14px;
+    color: var(--slate-500);
+    line-height: 1.6;
+}
+
+/* Stack
+------------------------------------*/
+
+.jarvis-stack {
+    padding: 100px 0;
+    background: var(--navy);
+}
+
+.jarvis-stack .section-label {
+    color: var(--accent-light);
+}
+
+.jarvis-stack .section-title {
+    color: var(--white);
+}
+
+.jarvis-stack-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.jarvis-stack-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 24px;
+    background: var(--navy-light);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255,255,255,0.06);
+    transition: border-color var(--transition);
+}
+
+.jarvis-stack-item:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+.jarvis-stack-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius);
+    background: rgba(59, 130, 246, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-light);
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.jarvis-stack-item h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 4px;
+}
+
+.jarvis-stack-item p {
+    font-size: 13px;
+    color: var(--slate-400);
+    line-height: 1.5;
+}
+
+/* Footer note
+------------------------------------*/
+
+.jarvis-footer-note {
+    padding: 80px 0;
+    background: var(--slate-100);
+}
+
+.jarvis-footer-note-inner {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.jarvis-footer-icon {
+    font-size: 32px;
+    color: var(--accent);
+    margin-bottom: 24px;
+    display: block;
+}
+
+.jarvis-footer-note p {
+    font-size: 18px;
+    font-style: italic;
+    color: var(--slate-700);
+    line-height: 1.7;
+    margin-bottom: 32px;
+}
+
+.jarvis-back-btn {
+    display: inline-flex;
+}
+
+/* Responsive
+------------------------------------*/
+
+@media screen and (max-width: 768px) {
+    .jarvis-hero-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .jarvis-hero-content .hero-title {
+        font-size: 44px;
+    }
+
+    .jarvis-hero-icon {
+        order: -1;
+    }
+
+    .jarvis-icon-ring {
+        width: 100px;
+        height: 100px;
+        font-size: 36px;
+    }
+
+    .jarvis-overview-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .jarvis-overview-stats {
+        padding-top: 0;
+        flex-direction: row;
+        overflow-x: auto;
+    }
+
+    .jarvis-stat {
+        min-width: 160px;
+    }
+
+    .jarvis-cap-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .jarvis-cap-grid .jarvis-cap-card:last-child:nth-child(3n - 1) {
+        grid-column: 1;
+    }
+
+    .jarvis-stack-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .jarvis-cap-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .jarvis-cap-grid .jarvis-cap-card:last-child:nth-child(3n - 1) {
+        grid-column: unset;
+    }
+}
