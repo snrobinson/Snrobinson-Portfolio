@@ -15,12 +15,13 @@
     <!-- Navigation -->
     <nav class="nav" id="nav">
         <div class="nav-inner">
-            <a href="#" class="nav-logo">SR</a>
+            <a href="#hero" class="nav-logo">SR</a>
             <div class="nav-links" id="navLinks">
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#credentials">Credentials</a>
-                <a href="#contact">Contact</a>
+                <a href="#about" data-section="about">About</a>
+                <a href="#experience" data-section="experience">Experience</a>
+                <a href="#projects" data-section="projects">Projects</a>
+                <a href="#credentials" data-section="credentials">Credentials</a>
+                <a href="#contact" data-section="contact">Contact</a>
             </div>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
                 <i class="fa-solid fa-bars"></i>
@@ -35,12 +36,15 @@
                 <div class="hero-content">
                     <p class="hero-label">AI Program Manager | Enterprise Tech Delivery | PMP · CSM</p>
                     <h1 class="hero-title">Stephen Robinson</h1>
-                    <p class="hero-tagline">I manage complex, high-stakes programs across infrastructure, cloud, and security -- bridging program execution and applied AI.</p>
-                    <p class="hero-subtitle">Engineering Project Manager at NBCUniversal with 10 years of enterprise delivery experience. I bring structure to ambiguity and turn technical complexity into measurable business outcomes.</p>
+                    <p class="hero-tagline">I manage complex, high-stakes programs across infrastructure, cloud, and security — bridging program execution and applied AI.</p>
+                    <p class="hero-subtitle">Engineering Project Manager at NBCUniversal with 10+ years of enterprise delivery experience. I bring structure to ambiguity and turn technical complexity into measurable business outcomes.</p>
                     <div class="hero-ctas">
                         <a href="#projects" class="btn btn-primary">View Projects</a>
                         <a href="#contact" class="btn btn-secondary">Let's Connect</a>
                     </div>
+                    <a href="Stephen-Robinson-Resume.pdf" download class="resume-download-link">
+                        <i class="fa-solid fa-file-arrow-down"></i> Download Resume
+                    </a>
                 </div>
                 <div class="hero-image">
                     <img src="images/STEPHEN-ROBINSON2.JPG" alt="Stephen Robinson - AI Program Manager">
@@ -48,28 +52,28 @@
             </div>
         </section>
 
-        <!-- Value Proposition -->
+        <!-- Core Strengths -->
         <section class="strengths" id="strengths">
             <div class="container">
-                <h2 class="section-label">Core Strengths</h2>
-                <p class="section-title">What I bring to every engagement</p>
+                <h2 class="section-label fade-in">Core Strengths</h2>
+                <p class="section-title fade-in">What I bring to every engagement</p>
                 <div class="strengths-grid">
-                    <div class="strength-card">
+                    <div class="strength-card fade-in">
                         <div class="strength-icon"><i class="fa-solid fa-robot"></i></div>
                         <h3>AI & Process Automation</h3>
                         <p>Identifying and implementing AI-driven solutions and automation workflows that reduce operational overhead and accelerate business outcomes.</p>
                     </div>
-                    <div class="strength-card">
+                    <div class="strength-card fade-in">
                         <div class="strength-icon"><i class="fa-solid fa-diagram-project"></i></div>
                         <h3>Enterprise Program Delivery</h3>
                         <p>End-to-end management of multi-million dollar technology programs, from requirements through deployment, with a track record of on-time, on-budget delivery.</p>
                     </div>
-                    <div class="strength-card">
+                    <div class="strength-card fade-in">
                         <div class="strength-icon"><i class="fa-solid fa-cloud"></i></div>
                         <h3>Cloud & Infrastructure Strategy</h3>
                         <p>Hands-on experience architecting and managing cloud environments across AWS and SaaS platforms. Former AWS Certified Solutions Architect.</p>
                     </div>
-                    <div class="strength-card">
+                    <div class="strength-card fade-in">
                         <div class="strength-icon"><i class="fa-solid fa-handshake"></i></div>
                         <h3>Stakeholder & Vendor Management</h3>
                         <p>Translating technical complexity into executive-ready communication. Aligning cross-functional teams, vendors, and business units toward shared goals.</p>
@@ -78,53 +82,193 @@
             </div>
         </section>
 
+        <!-- Work Experience Timeline -->
+        <section class="experience" id="experience">
+            <div class="container">
+                <h2 class="section-label fade-in">Experience</h2>
+                <p class="section-title fade-in">Career journey</p>
+                <div class="timeline">
+
+                    <!-- NBCUniversal - PM -->
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div class="timeline-title-group">
+                                    <h3 class="timeline-role">Project Manager, Engineering Technology PMO</h3>
+                                    <p class="timeline-company">
+                                        <img src="images/NBCU.jpg" alt="NBCUniversal" class="company-logo">
+                                        NBCUniversal
+                                    </p>
+                                </div>
+                                <span class="timeline-date">Feb 2022 – Present</span>
+                            </div>
+                            <ul class="timeline-bullets">
+                                <li>Lead end-to-end delivery of software and infrastructure engineering programs for a Fortune 500 global media company</li>
+                                <li>Drive program execution using both Waterfall and Agile/Scrum frameworks across cross-functional engineering teams</li>
+                                <li>Manage stakeholder communication, risk mitigation, and escalation resolution for high-visibility technology initiatives</li>
+                            </ul>
+                            <div class="timeline-tags">
+                                <span>Program Management</span>
+                                <span>Agile / Scrum</span>
+                                <span>Waterfall</span>
+                                <span>Stakeholder Management</span>
+                                <span>Infrastructure</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NBCUniversal - TBSA -->
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div class="timeline-title-group">
+                                    <h3 class="timeline-role">Technical Business Systems Analyst</h3>
+                                    <p class="timeline-company">
+                                        <img src="images/NBCU.jpg" alt="NBCUniversal" class="company-logo">
+                                        NBCUniversal
+                                    </p>
+                                </div>
+                                <span class="timeline-date">Sep 2019 – Feb 2022</span>
+                            </div>
+                            <ul class="timeline-bullets">
+                                <li>Managed server operations including application deployment, maintenance, and upgrades across Universal Brand Development's suite of enterprise applications</li>
+                                <li>Drove operational excellence across the Operations and Technology team, supporting 10+ business-critical systems</li>
+                                <li>Managed the Universal Brand Development annual financial plan, including pacing and forecasting of capex/opex spending</li>
+                            </ul>
+                            <div class="timeline-tags">
+                                <span>Server Management</span>
+                                <span>Business Systems</span>
+                                <span>Financial Planning</span>
+                                <span>Operations</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DocuPhase -->
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div class="timeline-title-group">
+                                    <h3 class="timeline-role">Process Improvement Consultant</h3>
+                                    <p class="timeline-company">
+                                        <img src="images/DocuPhase.jpg" alt="DocuPhase" class="company-logo">
+                                        DocuPhase
+                                    </p>
+                                </div>
+                                <span class="timeline-date">Oct 2018 – Sep 2019</span>
+                            </div>
+                            <ul class="timeline-bullets">
+                                <li>Designed and deployed custom DocuPhase workflow solutions that drove measurable process automation and efficiency gains for clients</li>
+                                <li>Built client-facing workflow interfaces using HTML, CSS, and JavaScript — translating business requirements into functional software</li>
+                                <li>Developed complex SQL database backends for custom application integrations and reporting solutions</li>
+                            </ul>
+                            <div class="timeline-tags">
+                                <span>Process Automation</span>
+                                <span>HTML / CSS / JS</span>
+                                <span>SQL</span>
+                                <span>Workflow Design</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fairfax Software -->
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div class="timeline-title-group">
+                                    <h3 class="timeline-role">Business Analyst</h3>
+                                    <p class="timeline-company">
+                                        <img src="images/FairFax-Imaging.png" alt="Fairfax Software" class="company-logo">
+                                        Fairfax Software
+                                    </p>
+                                </div>
+                                <span class="timeline-date">Apr 2016 – Oct 2018</span>
+                            </div>
+                            <ul class="timeline-bullets">
+                                <li>Designed, configured, deployed, and tested custom Quick Modules imaging solutions for enterprise clients</li>
+                                <li>Traveled to client sites to gather requirements and deliver tailored software solutions on-schedule</li>
+                            </ul>
+                            <div class="timeline-tags">
+                                <span>Business Analysis</span>
+                                <span>Requirements Gathering</span>
+                                <span>Software Delivery</span>
+                                <span>Client Engagement</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
         <!-- Projects -->
         <section class="projects" id="projects">
             <div class="container">
-                <h2 class="section-label">Projects</h2>
-                <p class="section-title">What I'm building</p>
+                <h2 class="section-label fade-in">Projects</h2>
+                <p class="section-title fade-in">What I'm building</p>
                 <div class="projects-grid">
 
-                    <a href="jarvis/" class="project-card project-card-link">
-                        <div class="project-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <a href="jarvis/" class="project-card project-card-link fade-in">
+                        <div class="project-card-top">
+                            <div class="project-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                            <i class="fa-solid fa-arrow-up-right-from-square project-arrow"></i>
+                        </div>
                         <div class="project-meta">
                             <span class="project-platform">AI</span>
+                            <span class="project-status project-status-live">Live</span>
                         </div>
                         <h3>JARVIS</h3>
                         <p>A personal AI executive assistant and life command center — integrating email, calendar, finances, and project management into a single intelligent layer.</p>
                     </a>
 
-                    <a href="https://www.robinson-consulting-group.com" target="_blank" class="project-card project-card-link">
-                        <div class="project-icon"><i class="fa-solid fa-globe"></i></div>
+                    <a href="https://www.robinson-consulting-group.com" target="_blank" class="project-card project-card-link fade-in">
+                        <div class="project-card-top">
+                            <div class="project-icon"><i class="fa-solid fa-globe"></i></div>
+                            <i class="fa-solid fa-arrow-up-right-from-square project-arrow"></i>
+                        </div>
                         <div class="project-meta">
                             <span class="project-platform">Consulting</span>
+                            <span class="project-status project-status-live">Live</span>
                         </div>
                         <h3>Robinson Consulting Group</h3>
                         <p>Professional services, consulting, and educational material bridging the gap between technology and people.</p>
                     </a>
 
-                    <div class="project-card">
-                        <div class="project-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+                    <div class="project-card fade-in">
+                        <div class="project-card-top">
+                            <div class="project-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+                        </div>
                         <div class="project-meta">
                             <span class="project-platform">iOS</span>
+                            <span class="project-status project-status-wip">In Development</span>
                         </div>
                         <h3>Retro Snake Game</h3>
                         <p>A retro snake game built for iOS, bringing the classic arcade experience to modern mobile devices.</p>
                     </div>
 
-                    <div class="project-card">
-                        <div class="project-icon"><i class="fa-solid fa-heart"></i></div>
+                    <div class="project-card fade-in">
+                        <div class="project-card-top">
+                            <div class="project-icon"><i class="fa-solid fa-heart"></i></div>
+                        </div>
                         <div class="project-meta">
                             <span class="project-platform">iOS</span>
+                            <span class="project-status project-status-wip">In Development</span>
                         </div>
                         <h3>Daily Anchor</h3>
                         <p>A couple's and relationship building app designed to strengthen connections through daily intentional engagement.</p>
                     </div>
 
-                    <div class="project-card">
-                        <div class="project-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
+                    <div class="project-card fade-in">
+                        <div class="project-card-top">
+                            <div class="project-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
+                        </div>
                         <div class="project-meta">
                             <span class="project-platform">iOS</span>
+                            <span class="project-status project-status-wip">In Development</span>
                         </div>
                         <h3>LevelUP Game</h3>
                         <p>A motivational word puzzle game that challenges players to level up their vocabulary and mindset.</p>
@@ -134,27 +278,57 @@
             </div>
         </section>
 
+        <!-- Interests -->
+        <section class="interests" id="interests">
+            <div class="container">
+                <h2 class="section-label fade-in">Beyond the Résumé</h2>
+                <p class="section-title fade-in">What drives me outside of work</p>
+                <div class="interests-grid">
+                    <div class="interest-card fade-in">
+                        <div class="interest-icon"><i class="fa-solid fa-robot"></i></div>
+                        <h3>AI & Emerging Tech</h3>
+                        <p>I'm genuinely obsessed with how AI is reshaping work and life. Beyond reading about it, I'm building it — JARVIS, my personal AI operating system, started as a side project and became a daily necessity.</p>
+                    </div>
+                    <div class="interest-card fade-in">
+                        <div class="interest-icon"><i class="fa-solid fa-rocket"></i></div>
+                        <h3>Entrepreneurship</h3>
+                        <p>I can't not build things. Robinson Consulting Group, Robinson Business Ventures, iOS apps, AI tools — I'm always in build mode. If there's a problem worth solving, I'd rather create the solution than wait for one.</p>
+                    </div>
+                    <div class="interest-card fade-in">
+                        <div class="interest-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <h3>Lifelong Learning</h3>
+                        <p>PMP, CSM, CompTIA Cloud+, AWS Solutions Architect — and now a Master's in AI at Penn State. My bookshelf and my transcript tell the same story: the learning never stops, and that's exactly the point.</p>
+                    </div>
+                    <div class="interest-card fade-in">
+                        <div class="interest-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+                        <h3>Building Real Products</h3>
+                        <p>There's something uniquely satisfying about shipping software that people actually use. From retro games to relationship apps to AI assistants, I love the full arc from idea to product in the hands of real users.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- About -->
         <section class="about" id="about">
             <div class="container">
                 <div class="about-grid">
                     <div class="about-content">
-                        <h2 class="section-label">About</h2>
-                        <p class="section-title">From hands-on engineering to program leadership</p>
-                        <p>Engineering Project Manager at NBCUniversal with 10 years of enterprise delivery experience, bridging program execution and applied AI. I manage complex, high-stakes programs across infrastructure, cloud, and security -- bringing structure to ambiguity and turning technical complexity into business outcomes.</p>
-                        <p>I started my career writing code, migrating databases, and troubleshooting infrastructure. That technical foundation is what makes me different as a program manager. I don't just manage timelines -- I understand the systems, the trade-offs, and the technical decisions behind them.</p>
-                        <p>Over the past decade, I've worked across the full spectrum of enterprise technology: cloud infrastructure at NBCUniversal, process automation consulting at DocuPhase, and custom solution delivery at Fairfax Imaging. Today, I focus on leading large-scale technology programs, implementing AI-driven solutions, and helping organizations turn technical complexity into competitive advantage.</p>
+                        <h2 class="section-label fade-in">About</h2>
+                        <p class="section-title fade-in">From hands-on engineering to program leadership</p>
+                        <p class="fade-in">Engineering Project Manager at NBCUniversal with 10+ years of enterprise delivery experience, bridging program execution and applied AI. I manage complex, high-stakes programs across infrastructure, cloud, and security — bringing structure to ambiguity and turning technical complexity into business outcomes.</p>
+                        <p class="fade-in">I started my career writing code, migrating databases, and troubleshooting infrastructure. That technical foundation is what makes me different as a program manager. I don't just manage timelines — I understand the systems, the trade-offs, and the technical decisions behind them.</p>
+                        <p class="fade-in">Over the past decade, I've worked across the full spectrum of enterprise technology: cloud infrastructure at NBCUniversal, process automation consulting at DocuPhase, and custom solution delivery at Fairfax Imaging. Today, I focus on leading large-scale technology programs, implementing AI-driven solutions, and helping organizations turn technical complexity into competitive advantage.</p>
                     </div>
                     <div class="about-highlights">
-                        <div class="highlight">
+                        <div class="highlight fade-in">
                             <span class="highlight-number">10+</span>
                             <span class="highlight-label">Years in Enterprise Technology</span>
                         </div>
-                        <div class="highlight">
+                        <div class="highlight fade-in">
                             <span class="highlight-number">3</span>
                             <span class="highlight-label">Industries Served</span>
                         </div>
-                        <div class="highlight">
+                        <div class="highlight fade-in">
                             <span class="highlight-number">Fortune 500</span>
                             <span class="highlight-label">Program Leadership</span>
                         </div>
@@ -166,39 +340,39 @@
         <!-- Credentials -->
         <section class="credentials" id="credentials">
             <div class="container">
-                <h2 class="section-label">Credentials</h2>
-                <p class="section-title">Education & professional development</p>
+                <h2 class="section-label fade-in">Credentials</h2>
+                <p class="section-title fade-in">Education & professional development</p>
                 <div class="cred-grid">
-                    <div class="cred-card cred-active">
+                    <div class="cred-card cred-active fade-in">
                         <div class="cred-status">In Progress</div>
                         <h3>M.S. in Artificial Intelligence</h3>
                         <p class="cred-org">Penn State University</p>
                         <p class="cred-detail">Advanced study in applied AI, machine learning, and intelligent systems</p>
                     </div>
-                    <div class="cred-card cred-active">
+                    <div class="cred-card cred-active fade-in">
                         <div class="cred-status">Completed</div>
                         <h3>B.S. Information Technology</h3>
                         <p class="cred-org">University of South Florida, 2017</p>
                         <p class="cred-detail">Coursework in web development, database management, network administration, business analysis, and software development</p>
                     </div>
-                    <div class="cred-card cred-active">
+                    <div class="cred-card cred-active fade-in">
                         <div class="cred-status">Active</div>
                         <h3>Project Management Professional (PMP)</h3>
                         <p class="cred-org">Project Management Institute</p>
                         <p class="cred-detail">Industry-standard certification for leading and directing projects and teams</p>
                     </div>
-                    <div class="cred-card cred-active">
+                    <div class="cred-card cred-active fade-in">
                         <div class="cred-status">Active</div>
                         <h3>Certified ScrumMaster (CSM)</h3>
                         <p class="cred-org">Scrum Alliance</p>
                         <p class="cred-detail">Certified in Agile/Scrum methodology for iterative project delivery</p>
                     </div>
-                    <div class="cred-card">
-                        <h3>AWS Solutions Architect - Associate</h3>
+                    <div class="cred-card fade-in">
+                        <h3>AWS Solutions Architect – Associate</h3>
                         <p class="cred-org">Amazon Web Services</p>
                         <p class="cred-detail">Demonstrated ability to design scalable, fault-tolerant distributed systems on AWS</p>
                     </div>
-                    <div class="cred-card cred-active">
+                    <div class="cred-card cred-active fade-in">
                         <div class="cred-status">Active</div>
                         <h3>CompTIA Cloud+</h3>
                         <p class="cred-org">CompTIA</p>
@@ -211,10 +385,10 @@
         <!-- Tools & Platforms -->
         <section class="tools" id="tools">
             <div class="container">
-                <h2 class="section-label">Tools & Platforms</h2>
-                <p class="section-title">Technologies I work with</p>
+                <h2 class="section-label fade-in">Tools & Platforms</h2>
+                <p class="section-title fade-in">Technologies I work with</p>
                 <div class="tools-grid">
-                    <div class="tool-group">
+                    <div class="tool-group fade-in">
                         <h3>Cloud & Infrastructure</h3>
                         <div class="tool-tags">
                             <span>AWS</span>
@@ -224,7 +398,7 @@
                             <span>Dev/QA/Staging Environments</span>
                         </div>
                     </div>
-                    <div class="tool-group">
+                    <div class="tool-group fade-in">
                         <h3>Program Management</h3>
                         <div class="tool-tags">
                             <span>Jira</span>
@@ -234,7 +408,7 @@
                             <span>Six Sigma / DMAIC</span>
                         </div>
                     </div>
-                    <div class="tool-group">
+                    <div class="tool-group fade-in">
                         <h3>Data & Analytics</h3>
                         <div class="tool-tags">
                             <span>SQL</span>
@@ -243,18 +417,18 @@
                             <span>Business Intelligence</span>
                         </div>
                     </div>
-                    <div class="tool-group">
+                    <div class="tool-group fade-in">
                         <h3>Development</h3>
                         <div class="tool-tags">
                             <span>JavaScript</span>
                             <span>C#</span>
                             <span>.NET</span>
-                            <span>HTML/CSS</span>
+                            <span>HTML / CSS</span>
                             <span>Python</span>
                             <span>Git</span>
                         </div>
                     </div>
-                    <div class="tool-group">
+                    <div class="tool-group fade-in">
                         <h3>AI & Automation</h3>
                         <div class="tool-tags">
                             <span>AI Implementation</span>
@@ -285,6 +459,7 @@
                     <div class="contact-links">
                         <a href="https://github.com/snrobinson" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
                         <a href="https://robinson-consulting-group.com" target="_blank"><i class="fa-solid fa-globe"></i> Robinson Consulting Group</a>
+                        <a href="Stephen-Robinson-Resume.pdf" download><i class="fa-solid fa-file-arrow-down"></i> Resume</a>
                     </div>
                 </div>
             </div>
