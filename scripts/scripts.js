@@ -1,119 +1,87 @@
 // ===========================================
-// Navigation — scroll shadow + scroll-to-top
+// Theme toggle — dark is the default; choice persists
+// (initial theme is set pre-paint by an inline script in <head>)
 // ===========================================
 
-const nav = document.getElementById('nav');
-const scrollTop = document.getElementById('scrollTop');
-
-window.addEventListener('scroll', function () {
-    if (window.scrollY > 10) {
-        nav.classList.add('scrolled');
-    } else {
-        nav.classList.remove('scrolled');
-    }
-
-    if (window.scrollY > 300) {
-        scrollTop.classList.add('visible');
-    } else {
-        scrollTop.classList.remove('visible');
-    }
-});
-
-scrollTop.addEventListener('click', function () {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
-// ===========================================
-// Mobile navigation — toggle + close on link click + click outside
-// ===========================================
-
-const navToggle = document.getElementById('navToggle');
-const navLinks = document.getElementById('navLinks');
-
-navToggle.addEventListener('click', function (e) {
-    e.stopPropagation();
-    navLinks.classList.toggle('open');
-});
-
-navLinks.querySelectorAll('a').forEach(function (link) {
-    link.addEventListener('click', function () {
-        navLinks.classList.remove('open');
+(function () {
+    var toggle = document.getElementById('themeToggle');
+    if (!toggle) return;
+    toggle.addEventListener('click', function () {
+        var current = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+        var next = current === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) { }
     });
-});
-
-document.addEventListener('click', function (e) {
-    if (!nav.contains(e.target)) {
-        navLinks.classList.remove('open');
-    }
-});
+})();
 
 // ===========================================
-// Scroll Spy — highlight active nav link
+// Header — hairline border once scrolled
 // ===========================================
 
-const sections = document.querySelectorAll('main section[id]');
-const navLinkEls = document.querySelectorAll('.nav-links a[data-section]');
+(function () {
+    var header = document.getElementById('siteHeader');
+    if (!header) return;
+    var onScroll = function () {
+        header.classList.toggle('scrolled', window.scrollY > 8);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+})();
 
-function updateActiveNav() {
-    let currentSection = '';
-    const scrollPos = window.scrollY + 100;
+// ===========================================
+// Mobile navigation
+// ===========================================
 
-    sections.forEach(function (section) {
-        const top = section.offsetTop;
-        const height = section.offsetHeight;
-        if (scrollPos >= top && scrollPos < top + height) {
-            currentSection = section.getAttribute('id');
-        }
+(function () {
+    var navToggle = document.getElementById('navToggle');
+    var navLinks = document.getElementById('navLinks');
+    if (!navToggle || !navLinks) return;
+
+    var setOpen = function (open) {
+        navLinks.classList.toggle('open', open);
+        navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    };
+
+    navToggle.addEventListener('click', function (e) {
+        e.stopPropagation();
+        setOpen(!navLinks.classList.contains('open'));
     });
 
-    navLinkEls.forEach(function (link) {
-        link.classList.remove('active');
-        if (link.getAttribute('data-section') === currentSection) {
-            link.classList.add('active');
-        }
+    navLinks.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () { setOpen(false); });
     });
-}
 
-window.addEventListener('scroll', updateActiveNav, { passive: true });
-updateActiveNav();
+    document.addEventListener('click', function (e) {
+        if (!navLinks.contains(e.target) && e.target !== navToggle) setOpen(false);
+    });
+})();
 
 // ===========================================
-// Fade-in — IntersectionObserver for .fade-in elements
+// Scroll spy — highlight the active nav link
 // ===========================================
 
-const fadeEls = document.querySelectorAll('.fade-in');
+(function () {
+    var links = Array.prototype.slice.call(document.querySelectorAll('.nav-links a[href^="#"]'));
+    if (!links.length) return;
 
-if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver(
-        function (entries) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    // Stagger children within grids
-                    const parent = entry.target.parentElement;
-                    const siblings = Array.from(parent.querySelectorAll('.fade-in'));
-                    const index = siblings.indexOf(entry.target);
-                    const delay = siblings.length > 1 ? index * 80 : 0;
+    var targets = links
+        .map(function (link) {
+            var id = link.getAttribute('href').slice(1);
+            var el = document.getElementById(id);
+            return el ? { link: link, el: el } : null;
+        })
+        .filter(Boolean);
 
-                    setTimeout(function () {
-                        entry.target.classList.add('visible');
-                    }, delay);
+    var update = function () {
+        var pos = window.scrollY + 120;
+        var current = null;
+        targets.forEach(function (t) {
+            if (t.el.offsetTop <= pos) current = t;
+        });
+        links.forEach(function (l) { l.classList.remove('active'); });
+        if (current) current.link.classList.add('active');
+    };
 
-                    observer.unobserve(entry.target);
-                }
-            });
-        },
-        {
-            threshold: 0.12,
-            rootMargin: '0px 0px -40px 0px'
-        }
-    );
-
-    fadeEls.forEach(function (el) {
-        observer.observe(el);
-    });
-} else {
-    // Fallback: show everything immediately
-    fadeEls.forEach(function (el) {
-        el.classList.add('visible');
-    });
-}
+    window.addEventListener('scroll', update, { passive: true });
+    update();
+})();

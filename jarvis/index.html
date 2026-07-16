@@ -4,213 +4,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="JARVIS — Stephen Robinson's personal AI executive assistant and life command center. Integrating email, calendar, finances, and project management into a unified intelligence layer.">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>JARVIS — Personal AI Executive Assistant | Stephen Robinson</title>
+    <meta name="description" content="JARVIS — Stephen Robinson's personal AI executive assistant and life command center. Integrating email, calendar, finances, and project management into a unified intelligence layer built on Claude, Node.js, Plaid, Notion, and MCP.">
+    <link rel="canonical" href="https://www.snrobinson.com/jarvis/">
+
+    <script>
+        (function () {
+            try {
+                var t = localStorage.getItem('theme') || 'dark';
+                document.documentElement.setAttribute('data-theme', t);
+            } catch (e) { document.documentElement.setAttribute('data-theme', 'dark'); }
+        })();
+    </script>
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Stephen Robinson">
+    <meta property="og:title" content="JARVIS — Personal AI Executive Assistant">
+    <meta property="og:description" content="A personal AI command center integrating email, calendar, finances, and projects into a unified intelligence layer. Built on Claude, Node.js, Plaid, Notion, and MCP.">
+    <meta property="og:url" content="https://www.snrobinson.com/jarvis/">
+    <meta property="og:image" content="https://www.snrobinson.com/images/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+    <meta name="theme-color" content="#0c0c0d">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link href="../css/styles.css" rel="stylesheet">
     <link href="jarvis.css" rel="stylesheet">
-    <title>JARVIS | Stephen Robinson</title>
 </head>
 
-<body>
-    <!-- Navigation -->
-    <nav class="nav" id="nav">
-        <div class="nav-inner">
-            <a href="../" class="nav-logo">SR</a>
-            <div class="nav-links" id="navLinks">
-                <a href="../#about">About</a>
-                <a href="../#projects">Projects</a>
-                <a href="../#credentials">Credentials</a>
-                <a href="../#contact">Contact</a>
+<body id="top">
+    <header class="site-header" id="siteHeader">
+        <div class="wrap header-inner">
+            <a href="../" class="wordmark">Stephen&nbsp;Robinson<span class="wordmark-mark">/</span></a>
+            <nav class="nav-links" id="navLinks">
+                <a href="../#work">work</a>
+                <a href="../#about">about</a>
+                <a href="../#contact">contact</a>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">
+                    <svg class="icon-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    <svg class="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg>
+                </button>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">menu</button>
             </div>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                <i class="fa-solid fa-bars"></i>
-            </button>
         </div>
-    </nav>
+    </header>
 
     <main>
-
         <!-- Hero -->
-        <section class="jarvis-hero">
-            <div class="container">
-                <div class="jarvis-hero-inner">
-                    <div class="jarvis-hero-content">
-                        <p class="hero-label"><i class="fa-solid fa-wand-magic-sparkles"></i>&nbsp; AI Project</p>
-                        <h1 class="hero-title">JARVIS</h1>
-                        <p class="hero-tagline">Personal AI Executive Assistant</p>
-                        <p class="hero-subtitle">A personal command center built to manage the complexity of career, business, and life — simultaneously.</p>
-                        <div class="jarvis-badges">
-                            <span class="jarvis-badge">Claude API</span>
-                            <span class="jarvis-badge">Node.js</span>
-                            <span class="jarvis-badge">Plaid</span>
-                            <span class="jarvis-badge">Notion</span>
-                            <span class="jarvis-badge">Gmail</span>
-                            <span class="jarvis-badge">MCP</span>
-                        </div>
-                    </div>
-                    <div class="jarvis-hero-icon">
-                        <div class="jarvis-icon-ring">
-                            <i class="fa-solid fa-wand-magic-sparkles"></i>
-                        </div>
-                    </div>
+        <section class="hero case-hero">
+            <div class="wrap">
+                <a href="../#work" class="back-link"><span aria-hidden="true">←</span> Selected work</a>
+                <p class="kicker"><span class="kicker-mark"></span>Case study · Personal AI system</p>
+                <h1 class="hero-h1 case-h1">JARVIS</h1>
+                <p class="lead case-lead">A personal AI executive assistant and life command center — one intelligent layer over everything that matters.</p>
+                <p class="prose case-intro">Built to manage the complexity of running a career, two businesses, and a family's financial future — simultaneously.</p>
+                <p class="badges">Claude API · Node.js · Plaid · Gmail · Google Calendar · Notion · MCP</p>
+            </div>
+        </section>
+
+        <div class="stat-strip">
+            <div class="wrap stat-strip-inner three">
+                <div class="stat"><span class="stat-n">6+</span><span class="stat-l">integrated data sources</span></div>
+                <div class="stat"><span class="stat-n">1</span><span class="stat-l">unified intelligence layer</span></div>
+                <div class="stat"><span class="stat-n">∞</span><span class="stat-l">model-agnostic by design</span></div>
+            </div>
+        </div>
+
+        <!-- 01 Overview -->
+        <section class="section" id="overview">
+            <div class="wrap section-grid">
+                <div class="section-aside">
+                    <span class="section-num">01</span>
+                    <h2 class="section-label">Overview</h2>
+                </div>
+                <div class="section-main">
+                    <p class="statement">One system. Everything connected.</p>
+                    <p class="prose">JARVIS is a personal AI command center I designed and built to manage the complexity of running a career, two businesses, and a family's financial future at once. It integrates email, calendar, finances, and active projects into a unified intelligence layer — surfacing daily briefings, decision support, and real-time context.</p>
+                    <p class="prose">It's built on Claude (Anthropic) as the reasoning layer and designed to be model-agnostic, with the architecture intentionally decoupled from any single provider.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Overview -->
-        <section class="jarvis-overview">
-            <div class="container">
-                <div class="jarvis-overview-inner">
-                    <div>
-                        <h2 class="section-label">Overview</h2>
-                        <p class="section-title">One system. Everything connected.</p>
-                        <p class="jarvis-body">JARVIS is a personal AI command center designed and built to manage the complexity of running a career, two businesses, and a family's financial future simultaneously. The system integrates email, calendar, finances, and active projects into a unified intelligence layer — surfacing daily briefings, decision support, and real-time context.</p>
-                        <p class="jarvis-body">Built on Claude (Anthropic) as the AI layer and designed to be model agnostic, with architecture intentionally decoupled from any single provider.</p>
-                    </div>
-                    <div class="jarvis-overview-stats">
-                        <div class="jarvis-stat">
-                            <span class="jarvis-stat-number">1</span>
-                            <span class="jarvis-stat-label">Unified intelligence layer</span>
+        <!-- 02 Capabilities -->
+        <section class="section" id="capabilities">
+            <div class="wrap section-grid">
+                <div class="section-aside">
+                    <span class="section-num">02</span>
+                    <h2 class="section-label">Capabilities</h2>
+                </div>
+                <div class="section-main">
+                    <dl class="capabilities">
+                        <div class="cap">
+                            <dt>Daily briefings</dt>
+                            <dd>Automated briefings synthesized from email, calendar, and financial data — surfacing what matters before the day begins.</dd>
                         </div>
-                        <div class="jarvis-stat">
-                            <span class="jarvis-stat-number">6+</span>
-                            <span class="jarvis-stat-label">Integrated data sources</span>
+                        <div class="cap">
+                            <dt>Project intelligence</dt>
+                            <dd>Tracks priorities, deadlines, and action items across work and business initiatives, maintaining context across every active program.</dd>
                         </div>
-                        <div class="jarvis-stat">
-                            <span class="jarvis-stat-number">∞</span>
-                            <span class="jarvis-stat-label">Model agnostic by design</span>
+                        <div class="cap">
+                            <dt>Business dashboards</dt>
+                            <dd>Live dashboards for Robinson Consulting Group and Robinson Business Ventures, turning operational data into actionable intelligence.</dd>
                         </div>
-                    </div>
+                        <div class="cap">
+                            <dt>Financial monitoring</dt>
+                            <dd>Monitors investment accounts, credit, and debt-payoff tracking across accounts — keeping financial goals in view at all times.</dd>
+                        </div>
+                        <div class="cap">
+                            <dt>AI decision support</dt>
+                            <dd>Context-aware support grounded in personal and professional history — not a generic chatbot, but a system that knows the situation.</dd>
+                        </div>
+                    </dl>
                 </div>
             </div>
         </section>
 
-        <!-- Key Capabilities -->
-        <section class="jarvis-capabilities">
-            <div class="container">
-                <h2 class="section-label">Key Capabilities</h2>
-                <p class="section-title">What JARVIS does</p>
-                <div class="jarvis-cap-grid">
-
-                    <div class="jarvis-cap-card">
-                        <div class="jarvis-cap-icon"><i class="fa-solid fa-newspaper"></i></div>
-                        <h3>Daily Briefings</h3>
-                        <p>Automated daily briefings synthesized from email, calendar, and financial data — surfacing what matters before the day begins.</p>
-                    </div>
-
-                    <div class="jarvis-cap-card">
-                        <div class="jarvis-cap-icon"><i class="fa-solid fa-list-check"></i></div>
-                        <h3>Project Intelligence</h3>
-                        <p>Tracks priorities, deadlines, and action items across work and business initiatives — maintaining context across every active program.</p>
-                    </div>
-
-                    <div class="jarvis-cap-card">
-                        <div class="jarvis-cap-icon"><i class="fa-solid fa-chart-line"></i></div>
-                        <h3>Business Dashboards</h3>
-                        <p>Live dashboards for Robinson Consulting Group and Robinson Business Ventures — turning operational data into actionable intelligence.</p>
-                    </div>
-
-                    <div class="jarvis-cap-card">
-                        <div class="jarvis-cap-icon"><i class="fa-solid fa-wallet"></i></div>
-                        <h3>Financial Monitoring</h3>
-                        <p>Monitors investment accounts, credit, and debt payoff tracking across all accounts — keeping financial goals in view at all times.</p>
-                    </div>
-
-                    <div class="jarvis-cap-card">
-                        <div class="jarvis-cap-icon"><i class="fa-solid fa-brain"></i></div>
-                        <h3>AI Decision Support</h3>
-                        <p>Context-aware decision support grounded in personal and professional history — not a generic chatbot, but a system that knows the situation.</p>
-                    </div>
-
+        <!-- 03 Stack -->
+        <section class="section" id="stack">
+            <div class="wrap section-grid">
+                <div class="section-aside">
+                    <span class="section-num">03</span>
+                    <h2 class="section-label">Stack</h2>
+                </div>
+                <div class="section-main">
+                    <dl class="capabilities">
+                        <div class="cap">
+                            <dt>Claude API</dt>
+                            <dd>Anthropic — reasoning, briefing generation, and the decision-support layer.</dd>
+                        </div>
+                        <div class="cap">
+                            <dt>Node.js</dt>
+                            <dd>Backend runtime — orchestrating integrations, scheduling, and data pipelines.</dd>
+                        </div>
+                        <div class="cap">
+                            <dt>Plaid</dt>
+                            <dd>Financial data layer — balances, transactions, and investment tracking.</dd>
+                        </div>
+                        <div class="cap">
+                            <dt>Gmail + Google Calendar</dt>
+                            <dd>Communication and scheduling context — the raw signal for daily briefings.</dd>
+                        </div>
+                        <div class="cap">
+                            <dt>Notion</dt>
+                            <dd>Knowledge base and project management — the persistent memory layer.</dd>
+                        </div>
+                        <div class="cap">
+                            <dt>MCP integrations</dt>
+                            <dd>Model Context Protocol — extensible tooling connecting Claude to live data sources.</dd>
+                        </div>
+                    </dl>
                 </div>
             </div>
         </section>
 
-        <!-- Stack & Tools -->
-        <section class="jarvis-stack">
-            <div class="container">
-                <h2 class="section-label">Stack & Tools</h2>
-                <p class="section-title">Built with</p>
-                <div class="jarvis-stack-grid">
-
-                    <div class="jarvis-stack-item">
-                        <div class="jarvis-stack-icon"><i class="fa-solid fa-robot"></i></div>
-                        <div>
-                            <h3>Claude API</h3>
-                            <p>Anthropic — AI reasoning, briefing generation, and decision support layer</p>
-                        </div>
-                    </div>
-
-                    <div class="jarvis-stack-item">
-                        <div class="jarvis-stack-icon"><i class="fa-brands fa-node-js"></i></div>
-                        <div>
-                            <h3>Node.js</h3>
-                            <p>Backend runtime — orchestrating integrations, scheduling, and data pipelines</p>
-                        </div>
-                    </div>
-
-                    <div class="jarvis-stack-item">
-                        <div class="jarvis-stack-icon"><i class="fa-solid fa-building-columns"></i></div>
-                        <div>
-                            <h3>Plaid</h3>
-                            <p>Financial data layer — account balances, transactions, and investment tracking</p>
-                        </div>
-                    </div>
-
-                    <div class="jarvis-stack-item">
-                        <div class="jarvis-stack-icon"><i class="fa-brands fa-google"></i></div>
-                        <div>
-                            <h3>Gmail + Google Calendar</h3>
-                            <p>Communication and scheduling context — the raw signal for daily briefings</p>
-                        </div>
-                    </div>
-
-                    <div class="jarvis-stack-item">
-                        <div class="jarvis-stack-icon"><i class="fa-solid fa-n"></i></div>
-                        <div>
-                            <h3>Notion</h3>
-                            <p>Knowledge base and project management — the persistent memory layer</p>
-                        </div>
-                    </div>
-
-                    <div class="jarvis-stack-item">
-                        <div class="jarvis-stack-icon"><i class="fa-solid fa-plug"></i></div>
-                        <div>
-                            <h3>MCP Integrations</h3>
-                            <p>Model Context Protocol — extensible tooling for connecting Claude to live data sources</p>
-                        </div>
-                    </div>
-
-                </div>
+        <!-- Closing -->
+        <section class="section case-close">
+            <div class="wrap">
+                <p class="case-quote">"This project sits at the intersection of AI engineering, systems thinking, and personal productivity."</p>
+                <a href="../" class="link-arrow"><span aria-hidden="true">←</span> Back to portfolio</a>
             </div>
         </section>
-
-        <!-- Footer note + back link -->
-        <section class="jarvis-footer-note">
-            <div class="container">
-                <div class="jarvis-footer-note-inner">
-                    <i class="fa-solid fa-wand-magic-sparkles jarvis-footer-icon"></i>
-                    <p>"This project sits at the intersection of AI engineering, systems thinking, and personal productivity."</p>
-                    <a href="../" class="btn btn-secondary jarvis-back-btn">
-                        <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
-                    </a>
-                </div>
-            </div>
-        </section>
-
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Stephen Robinson. All rights reserved.</p>
+        <div class="wrap footer-inner">
+            <span>© 2026 Stephen Robinson</span>
+            <span class="footer-loc">Built &amp; maintained by hand</span>
         </div>
     </footer>
-
-    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
-        <i class="fa-solid fa-arrow-up"></i>
-    </button>
 
     <script src="../scripts/scripts.js"></script>
 </body>
