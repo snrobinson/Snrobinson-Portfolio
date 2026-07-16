@@ -1,0 +1,22 @@
+{
+  "name": "Stephen Robinson — Lead Technical Program Manager",
+  "short_name": "S. Robinson",
+  "description": "Portfolio of Stephen Robinson, Lead Technical Program Manager & AI Delivery Leader.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b1120",
+  "theme_color": "#0f172a",
+  "icons": [
+    {
+      "src": "images/apple-touch-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

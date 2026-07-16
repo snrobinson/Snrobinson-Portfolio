@@ -1,4 +1,35 @@
 // ===========================================
+// Theme toggle — light / dark with persistence
+// (Initial theme is set pre-paint by an inline script in <head>)
+// ===========================================
+
+const themeToggle = document.getElementById('themeToggle');
+
+if (themeToggle) {
+    themeToggle.addEventListener('click', function () {
+        const current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+        const next = current === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        try {
+            localStorage.setItem('theme', next);
+        } catch (e) { }
+    });
+}
+
+// Follow the OS preference until the user makes an explicit choice
+if (window.matchMedia) {
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
+        let stored = null;
+        try {
+            stored = localStorage.getItem('theme');
+        } catch (err) { }
+        if (!stored) {
+            document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+        }
+    });
+}
+
+// ===========================================
 // Navigation — scroll shadow + scroll-to-top
 // ===========================================
 
@@ -30,20 +61,27 @@ scrollTop.addEventListener('click', function () {
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
 
+function setNavExpanded(isOpen) {
+    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+}
+
 navToggle.addEventListener('click', function (e) {
     e.stopPropagation();
-    navLinks.classList.toggle('open');
+    const isOpen = navLinks.classList.toggle('open');
+    setNavExpanded(isOpen);
 });
 
 navLinks.querySelectorAll('a').forEach(function (link) {
     link.addEventListener('click', function () {
         navLinks.classList.remove('open');
+        setNavExpanded(false);
     });
 });
 
 document.addEventListener('click', function (e) {
     if (!nav.contains(e.target)) {
         navLinks.classList.remove('open');
+        setNavExpanded(false);
     }
 });
 

@@ -4,12 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JARVIS | Stephen Robinson</title>
     <meta name="description" content="JARVIS — Stephen Robinson's personal AI executive assistant and life command center. Integrating email, calendar, finances, and project management into a unified intelligence layer.">
+    <link rel="canonical" href="https://www.snrobinson.com/jarvis/">
+
+    <!-- Set theme before paint to avoid flash of incorrect theme -->
+    <script>
+        (function () {
+            try {
+                var stored = localStorage.getItem('theme');
+                var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                document.documentElement.setAttribute('data-theme', theme);
+            } catch (e) { }
+        })();
+    </script>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Stephen Robinson">
+    <meta property="og:title" content="JARVIS — Personal AI Executive Assistant | Stephen Robinson">
+    <meta property="og:description" content="A personal AI command center integrating email, calendar, finances, and projects into a unified intelligence layer. Built on Claude, Node.js, Plaid, Notion, and MCP.">
+    <meta property="og:url" content="https://www.snrobinson.com/jarvis/">
+    <meta property="og:image" content="https://www.snrobinson.com/images/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+    <meta name="theme-color" content="#0f172a">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="../css/styles.css" rel="stylesheet">
     <link href="jarvis.css" rel="stylesheet">
-    <title>JARVIS | Stephen Robinson</title>
 </head>
 
 <body>
@@ -23,9 +51,15 @@
                 <a href="../#credentials">Credentials</a>
                 <a href="../#contact">Contact</a>
             </div>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+                    <i class="fa-solid fa-moon theme-icon-dark"></i>
+                    <i class="fa-solid fa-sun theme-icon-light"></i>
+                </button>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
         </div>
     </nav>
 

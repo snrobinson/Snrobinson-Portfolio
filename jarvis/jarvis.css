@@ -1,5 +1,7 @@
 /* ===========================================
    JARVIS PAGE — extends main design system
+   Uses semantic theme tokens so light/dark
+   modes stay consistent with the main site.
    =========================================== */
 
 /* Hero
@@ -7,7 +9,7 @@
 
 .jarvis-hero {
     padding: 140px 0 100px;
-    background: var(--navy);
+    background: var(--invert-bg);
     overflow: hidden;
     position: relative;
 }
@@ -28,6 +30,8 @@
     grid-template-columns: 1fr auto;
     gap: 60px;
     align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
 .jarvis-hero-content .hero-label {
@@ -35,7 +39,7 @@
 }
 
 .jarvis-hero-content .hero-title {
-    color: var(--white);
+    color: var(--invert-heading);
     font-size: 64px;
     letter-spacing: -2px;
 }
@@ -48,7 +52,7 @@
 }
 
 .jarvis-hero-content .hero-subtitle {
-    color: var(--slate-400);
+    color: var(--invert-body);
     max-width: 560px;
 }
 
@@ -96,7 +100,7 @@
 
 .jarvis-overview {
     padding: 100px 0;
-    background: var(--slate-100);
+    background: var(--bg-alt);
 }
 
 .jarvis-overview-inner {
@@ -109,7 +113,7 @@
 .jarvis-body {
     font-size: 16px;
     line-height: 1.8;
-    color: var(--slate-700);
+    color: var(--body);
     margin-bottom: 16px;
 }
 
@@ -122,8 +126,9 @@
 
 .jarvis-stat {
     padding: 24px;
-    background: var(--white);
+    background: var(--surface);
     border-radius: var(--radius);
+    border: 1px solid var(--surface-border);
     border-left: 3px solid var(--accent);
     box-shadow: var(--shadow-sm);
 }
@@ -133,14 +138,14 @@
     font-family: var(--font-mono);
     font-size: 28px;
     font-weight: 700;
-    color: var(--navy);
+    color: var(--heading);
     line-height: 1;
     margin-bottom: 4px;
 }
 
 .jarvis-stat-label {
     font-size: 14px;
-    color: var(--slate-500);
+    color: var(--muted);
 }
 
 /* Capabilities
@@ -148,7 +153,7 @@
 
 .jarvis-capabilities {
     padding: 100px 0;
-    background: var(--white);
+    background: var(--bg);
 }
 
 .jarvis-cap-grid {
@@ -163,8 +168,8 @@
 }
 
 .jarvis-cap-card {
-    background: var(--white);
-    border: 1px solid var(--slate-200);
+    background: var(--surface);
+    border: 1px solid var(--surface-border);
     border-radius: var(--radius-lg);
     padding: 32px;
     transition: all var(--transition);
@@ -172,7 +177,7 @@
 
 .jarvis-cap-card:hover {
     box-shadow: var(--shadow-lg);
-    border-color: transparent;
+    border-color: var(--accent);
     transform: translateY(-2px);
 }
 
@@ -192,13 +197,13 @@
 .jarvis-cap-card h3 {
     font-size: 17px;
     font-weight: 600;
-    color: var(--navy);
+    color: var(--heading);
     margin-bottom: 8px;
 }
 
 .jarvis-cap-card p {
     font-size: 14px;
-    color: var(--slate-500);
+    color: var(--muted);
     line-height: 1.6;
 }
 
@@ -207,7 +212,7 @@
 
 .jarvis-stack {
     padding: 100px 0;
-    background: var(--navy);
+    background: var(--invert-bg);
 }
 
 .jarvis-stack .section-label {
@@ -215,7 +220,7 @@
 }
 
 .jarvis-stack .section-title {
-    color: var(--white);
+    color: var(--invert-heading);
 }
 
 .jarvis-stack-grid {
@@ -229,7 +234,7 @@
     gap: 20px;
     align-items: flex-start;
     padding: 24px;
-    background: var(--navy-light);
+    background: var(--invert-surface);
     border-radius: var(--radius-lg);
     border: 1px solid rgba(255,255,255,0.06);
     transition: border-color var(--transition);
@@ -255,13 +260,13 @@
 .jarvis-stack-item h3 {
     font-size: 15px;
     font-weight: 600;
-    color: var(--white);
+    color: var(--invert-heading);
     margin-bottom: 4px;
 }
 
 .jarvis-stack-item p {
     font-size: 13px;
-    color: var(--slate-400);
+    color: var(--invert-body);
     line-height: 1.5;
 }
 
@@ -270,7 +275,7 @@
 
 .jarvis-footer-note {
     padding: 80px 0;
-    background: var(--slate-100);
+    background: var(--bg-alt);
 }
 
 .jarvis-footer-note-inner {
@@ -289,7 +294,7 @@
 .jarvis-footer-note p {
     font-size: 18px;
     font-style: italic;
-    color: var(--slate-700);
+    color: var(--body);
     line-height: 1.7;
     margin-bottom: 32px;
 }
