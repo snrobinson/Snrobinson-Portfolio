@@ -526,10 +526,18 @@ button { font: inherit; }
 
 /* Experience */
 .xp-list { list-style: none; }
-.xp { display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 30px; padding: 26px 0; border-top: 1px solid var(--line); }
+.xp { display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: 30px; padding: 26px 0; border-top: 1px solid var(--line); }
 .xp:first-child { padding-top: 0; border-top: none; }
 .xp-meta { display: flex; flex-direction: column; gap: 5px; }
+.xp-brand { display: grid; grid-template-columns: 50px minmax(0, 1fr); gap: 12px; align-items: center; margin-bottom: 4px; }
+.xp-company-copy { min-width: 0; display: flex; flex-direction: column; gap: 1px; }
+.xp-logo { width: 50px; height: 50px; display: grid; place-items: center; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: #0a0a0c; }
+.xp-logo img { width: 38px; height: 38px; max-width: none; object-fit: contain; }
+.xp-logo--nbcu img { width: auto; height: 30px; justify-self: start; }
+.xp-logo--onphase img { width: 44px; height: 44px; transform: scale(1.2); }
+.xp-logo--fairfax img { width: 40px; height: 40px; }
 .xp-co { font-family: var(--font-display); font-size: 16px; font-weight: 500; line-height: 1.4; }
+.xp-alias { color: var(--muted); font-family: var(--font-mono); font-size: 9px; line-height: 1.35; }
 .xp-date { color: var(--muted); font-family: var(--font-mono); font-size: 11px; }
 .xp-role { margin-bottom: 12px; font-size: 16px; font-weight: 600; }
 .xp-points { margin-bottom: 14px; list-style: none; }
@@ -538,6 +546,12 @@ button { font: inherit; }
 .xp-points em { color: var(--text); font-style: normal; font-weight: 600; }
 .xp-tags { color: var(--faint); font-family: var(--font-mono); font-size: 10px; line-height: 1.5; }
 .xp-summary { margin-bottom: 14px; color: var(--prose); font-size: 14.5px; line-height: 1.65; }
+.xp-subrole { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 18px; margin: 4px 0 16px; padding: 14px 16px; border-left: 2px solid var(--accent); background: var(--bg-soft); }
+.xp-subrole-head { display: flex; flex-direction: column; gap: 2px; }
+.xp-subrole-head span { color: var(--accent); font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.08em; text-transform: uppercase; }
+.xp-subrole-head strong { font-family: var(--font-display); font-size: 13px; font-weight: 600; line-height: 1.35; }
+.xp-subrole-head small { color: var(--muted); font-family: var(--font-mono); font-size: 9px; }
+.xp-subrole p { align-self: center; color: var(--prose); font-size: 12.5px; line-height: 1.55; }
 .resume-link { margin-top: 10px; padding-inline: 0; }
 
 /* Credentials */
@@ -668,6 +682,7 @@ button { font: inherit; }
     .toolkit-compact { grid-template-columns: 1fr; }
     .cap { gap: 7px; }
     .xp { gap: 10px; }
+    .xp-subrole { grid-template-columns: 1fr; gap: 8px; }
     .cred { gap: 3px; align-items: start; }
     .cred-status { text-align: left; }
     .toolkit-compact { gap: 8px; }
