@@ -565,10 +565,10 @@ button { font: inherit; }
 
 /* Credentials */
 .cred-list { list-style: none; }
-.cred { min-height: 58px; display: grid; grid-template-columns: 1.4fr 1fr auto; gap: 22px; align-items: center; padding: 14px 0; border-top: 1px solid var(--line); }
+.cred { min-height: 58px; display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) 190px; gap: 22px; align-items: center; padding: 14px 0; border-top: 1px solid var(--line); }
 .cred:first-child { border-top: none; padding-top: 0; }
 .cred-name { font-family: var(--font-display); font-size: 15px; font-weight: 500; }
-.cred-org { color: var(--muted); font-size: 13px; }
+.cred-org { color: var(--muted); font-size: 13px; text-align: left; }
 .cred-status { color: var(--accent); font-family: var(--font-mono); font-size: 10px; text-align: right; }
 .cred-prior { opacity: 0.86; }
 .cred-prior .cred-status { color: var(--faint); }
