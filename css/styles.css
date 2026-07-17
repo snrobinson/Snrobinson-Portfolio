@@ -410,20 +410,15 @@ button { font: inherit; }
 .preview-panel strong { font-family: var(--font-display); font-size: 15px; line-height: 1.25; font-weight: 500; }
 .preview-panel > span:last-child { color: var(--faint); font-size: 10px; }
 
-.consulting-preview {
+.brand-preview {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
     padding: 24px;
-    color: var(--muted);
-    font-family: var(--font-mono);
-    font-size: 10px;
-    letter-spacing: 0.08em;
+    background: #f6f7f9;
 }
 
-.consulting-preview span { padding: 10px; border: 1px solid var(--line); }
-.consulting-preview i { color: var(--accent); font-style: normal; }
+.brand-preview img { width: min(76%, 250px); height: auto; object-fit: contain; }
 .consulting-card .project-visual { min-height: 300px; }
 .snake-card { display: flex; flex-direction: column; }
 
@@ -487,6 +482,7 @@ button { font: inherit; }
     letter-spacing: -0.025em;
 }
 
+.venture-note-logo { width: min(100%, 230px); height: auto; margin-bottom: 22px; border: 1px solid var(--line); object-fit: contain; }
 .venture-note-body p { max-width: 66ch; color: var(--prose); font-size: 15px; line-height: 1.7; }
 .venture-note-values { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 18px; list-style: none; }
 .venture-note-values li { padding: 6px 9px; border: 1px solid var(--line); color: var(--muted); font-family: var(--font-mono); font-size: 9px; }
@@ -679,7 +675,7 @@ button { font: inherit; }
     .preview-grid { grid-template-columns: 1fr; }
     .preview-priority { grid-row: auto; }
     .project-visual { min-height: 270px; }
-    .consulting-preview { flex-wrap: wrap; }
+    .brand-preview { min-height: 240px; }
     .lab-list li { grid-template-columns: 1fr; gap: 2px; padding: 10px 0; }
 }
 
