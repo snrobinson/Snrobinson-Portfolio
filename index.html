@@ -41,7 +41,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
-    <link href="css/styles.css?v=20260716-5" rel="stylesheet">
+    <link href="css/styles.css?v=20260716-7" rel="stylesheet">
 
     <script type="application/ld+json">
     {
@@ -121,7 +121,9 @@
                     </div>
                 </div>
                 <figure class="hero-portrait">
-                    <img src="images/stephen-robinson-headshot.jpg" alt="Portrait of Stephen Robinson" width="720" height="720" fetchpriority="high">
+                    <div class="hero-portrait-frame">
+                        <img src="images/stephen-robinson-headshot.jpg" alt="Portrait of Stephen Robinson" width="720" height="720" fetchpriority="high">
+                    </div>
                     <figcaption>Enterprise delivery · Cloud · Security · AI</figcaption>
                 </figure>
             </div>
@@ -150,33 +152,34 @@
                     <article class="project-card project-featured">
                         <a href="jarvis/" class="project-link" aria-label="Read the JARVIS case study">
                             <div class="project-visual jarvis-preview" aria-hidden="true">
-                                <div class="preview-topline"><span>JARVIS / DAILY BRIEF</span><span class="status-live">LIVE</span></div>
-                                <div class="preview-grid">
-                                    <div class="preview-panel preview-priority">
-                                        <span class="preview-label">Priority</span>
-                                        <strong>Prepare modernization steering update</strong>
-                                        <span>3 decisions · 2 risks</span>
+                                <div class="preview-topline"><span>JARVIS / EXECUTIVE AGENT</span><span class="status-live">AGENT VISION</span></div>
+                                <div class="agent-preview">
+                                    <div class="agent-core">
+                                        <span class="agent-core-mark">J</span>
+                                        <div>
+                                            <span class="preview-label">Executive intelligence layer</span>
+                                            <strong>Context into coordinated action.</strong>
+                                            <small>Goals · commitments · people · projects</small>
+                                        </div>
                                     </div>
-                                    <div class="preview-panel">
-                                        <span class="preview-label">Calendar</span>
-                                        <strong>5 meetings</strong>
-                                        <span>First at 9:00 AM</span>
+                                    <div class="agent-loop" aria-label="JARVIS agent loop">
+                                        <span><b>01</b>Understand</span><i>→</i>
+                                        <span><b>02</b>Anticipate</span><i>→</i>
+                                        <span><b>03</b>Coordinate</span><i>→</i>
+                                        <span><b>04</b>Learn</span>
                                     </div>
-                                    <div class="preview-panel">
-                                        <span class="preview-label">Signals</span>
-                                        <strong>12 items</strong>
-                                        <span>Email · Projects · Finance</span>
-                                    </div>
+                                    <p class="agent-boundary">Human approval for consequential actions</p>
                                 </div>
                             </div>
                             <div class="project-content">
-                                <div class="project-eyebrow"><span>Personal AI system</span><span>Active use</span></div>
+                                <div class="project-eyebrow"><span>Executive AI agent</span><span>In development</span></div>
                                 <h3>JARVIS</h3>
-                                <p>A personal executive assistant that connects email, calendar, finances, and project context into one decision-support layer.</p>
+                                <p>A context-aware executive assistant AI agent designed to understand goals, anticipate priorities, coordinate across connected tools, and keep important work moving with less friction.</p>
                                 <ul class="project-proof" aria-label="JARVIS highlights">
-                                    <li>6+ integrated data sources</li>
-                                    <li>Model-agnostic architecture</li>
-                                    <li>Daily briefings and proactive signals</li>
+                                    <li>Persistent context</li>
+                                    <li>Proactive planning</li>
+                                    <li>Cross-tool coordination</li>
+                                    <li>Human approval</li>
                                 </ul>
                                 <span class="project-cta">Read case study <span aria-hidden="true">↗</span></span>
                             </div>
