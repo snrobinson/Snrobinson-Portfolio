@@ -3,8 +3,12 @@
     var toggle = document.getElementById('themeToggle');
     var themeColor = document.querySelector('meta[name="theme-color"]');
     if (!toggle) return;
+    var systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+    var override = null;
+    try { override = sessionStorage.getItem('themeOverride'); } catch (e) { }
 
-    var updateThemeControl = function () {
+    var applyTheme = function (theme) {
+        document.documentElement.setAttribute('data-theme', theme);
         var isLight = document.documentElement.getAttribute('data-theme') === 'light';
         var label = isLight ? 'Switch to dark theme' : 'Switch to light theme';
         toggle.setAttribute('aria-label', label);
@@ -14,13 +18,19 @@
 
     toggle.addEventListener('click', function () {
         var isLight = document.documentElement.getAttribute('data-theme') === 'light';
-        var next = isLight ? 'dark' : 'light';
-        document.documentElement.setAttribute('data-theme', next);
-        try { localStorage.setItem('theme', next); } catch (e) { }
-        updateThemeControl();
+        override = isLight ? 'dark' : 'light';
+        try { sessionStorage.setItem('themeOverride', override); } catch (e) { }
+        applyTheme(override);
     });
 
-    updateThemeControl();
+    var syncWithSystem = function (event) {
+        if (!override) applyTheme(event.matches ? 'dark' : 'light');
+    };
+
+    if (systemTheme.addEventListener) systemTheme.addEventListener('change', syncWithSystem);
+    else if (systemTheme.addListener) systemTheme.addListener(syncWithSystem);
+
+    applyTheme(override || (systemTheme.matches ? 'dark' : 'light'));
 })();
 
 // Sticky-header divider.
@@ -44,6 +54,7 @@
 
     var setOpen = function (open, returnFocus) {
         navLinks.classList.toggle('open', open);
+        document.body.classList.toggle('nav-open', open);
         navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
         navToggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
         navToggle.textContent = open ? 'close' : 'menu';
