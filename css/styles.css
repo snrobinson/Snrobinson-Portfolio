@@ -311,6 +311,8 @@ button { font: inherit; }
 
 .hero-portrait { position: relative; }
 
+.hero-portrait-frame { position: relative; }
+
 .hero-portrait img {
     position: relative;
     z-index: 1;
@@ -322,7 +324,7 @@ button { font: inherit; }
     filter: grayscale(0.1) contrast(1.02);
 }
 
-.hero-portrait::before {
+.hero-portrait-frame::before {
     content: '';
     position: absolute;
     inset: 0;
@@ -331,12 +333,16 @@ button { font: inherit; }
 }
 
 .hero-portrait figcaption {
-    margin-top: 20px;
+    position: relative;
+    margin-top: 22px;
+    padding-block: 2px;
     color: var(--faint);
     font-family: var(--font-mono);
     font-size: 10px;
+    line-height: 1.6;
     letter-spacing: 0.04em;
     text-transform: uppercase;
+    overflow-wrap: anywhere;
 }
 
 /* Proof strip */
@@ -579,6 +585,7 @@ button { font: inherit; }
 /* Responsive */
 @media (max-width: 900px) {
     .hero-grid { grid-template-columns: minmax(0, 1fr) 260px; }
+    .hero-portrait figcaption { font-size: 9px; letter-spacing: 0.02em; }
     .section-grid,
     .builder-note-inner { grid-template-columns: 1fr; gap: 26px; }
     .section-aside { flex-direction: row; align-items: baseline; gap: 12px; }
@@ -616,7 +623,7 @@ button { font: inherit; }
     .hero-grid { position: relative; display: block; }
     .hero-text { padding-top: 144px; }
     .hero-portrait { position: absolute; top: 0; left: 0; width: 118px; }
-    .hero-portrait::before { transform: translate(8px, 8px); }
+    .hero-portrait-frame::before { transform: translate(8px, 8px); }
     .hero-portrait figcaption { display: none; }
     .kicker { margin-bottom: 16px; font-size: 10px; }
     .hero-h1 { margin-bottom: 18px; font-size: clamp(43px, 13vw, 58px); }
