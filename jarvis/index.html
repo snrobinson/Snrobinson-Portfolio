@@ -12,6 +12,19 @@
 
     <script>
         (function () {
+            var navigation = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+            var reloaded = navigation
+                ? navigation.type === 'reload'
+                : performance.navigation && performance.navigation.type === 1;
+
+            if (reloaded) {
+                if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+                if (window.location.hash) {
+                    history.replaceState(null, '', window.location.pathname + window.location.search);
+                }
+                window.scrollTo(0, 0);
+            }
+
             var theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
             try { theme = sessionStorage.getItem('themeOverride') || theme; } catch (e) { }
             document.documentElement.setAttribute('data-theme', theme);
@@ -217,7 +230,7 @@
         <div class="wrap footer-inner"><span>© 2026 Stephen Robinson</span><a href="#top">Back to top ↑</a></div>
     </footer>
 
-    <script src="../scripts/scripts.js?v=20260717-3"></script>
+    <script src="../scripts/scripts.js?v=20260717-4"></script>
 </body>
 
 </html>
