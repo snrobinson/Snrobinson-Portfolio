@@ -377,7 +377,7 @@ button { font: inherit; }
 
 /* Project proof */
 .work-section { background: var(--bg-soft); }
-.project-grid { display: grid; grid-template-columns: 1.4fr 0.8fr; gap: 18px; }
+.project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
 
 .project-card {
     min-width: 0;
@@ -389,6 +389,9 @@ button { font: inherit; }
 
 .project-card:hover { transform: translateY(-3px); border-color: var(--accent); }
 .project-link { height: 100%; display: flex; flex-direction: column; }
+.project-featured { grid-column: 1 / -1; }
+.project-featured .project-link { display: grid; grid-template-columns: 1.15fr 0.85fr; }
+.project-featured .project-visual { min-height: 100%; border-right: 1px solid var(--line); border-bottom: none; }
 
 .project-visual {
     min-height: 220px;
@@ -420,6 +423,31 @@ button { font: inherit; }
 
 .consulting-preview span { padding: 10px; border: 1px solid var(--line); }
 .consulting-preview i { color: var(--accent); font-style: normal; }
+.consulting-card .project-visual { min-height: 300px; }
+
+.snake-preview {
+    min-height: 300px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: center;
+    gap: 10px;
+    padding: 16px;
+    overflow: hidden;
+    background:
+        linear-gradient(135deg, rgba(49, 245, 194, 0.06), transparent 50%),
+        var(--bg-elevated);
+}
+
+.snake-preview img {
+    width: 100%;
+    aspect-ratio: 588 / 1280;
+    object-fit: cover;
+    border: 1px solid rgba(122, 255, 222, 0.22);
+    border-radius: 8px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.snake-preview img:nth-child(2) { transform: translateY(-8px); }
 
 .project-content { flex: 1; display: flex; flex-direction: column; align-items: flex-start; padding: 24px; }
 .project-eyebrow { width: 100%; display: flex; justify-content: space-between; gap: 16px; margin-bottom: 14px; color: var(--muted); font-family: var(--font-mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; }
@@ -518,6 +546,7 @@ button { font: inherit; }
     .builder-note-inner { grid-template-columns: 1fr; gap: 26px; }
     .section-aside { flex-direction: row; align-items: baseline; gap: 12px; }
     .project-grid { grid-template-columns: 1fr; }
+    .project-featured { grid-column: auto; }
     .project-featured .project-link { display: grid; grid-template-columns: 1fr 1fr; }
     .project-featured .project-visual { min-height: 100%; border-right: 1px solid var(--line); border-bottom: none; }
     .cap { grid-template-columns: 1fr 1.3fr; }
