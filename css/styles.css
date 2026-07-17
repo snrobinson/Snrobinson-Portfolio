@@ -863,7 +863,7 @@ button { font: inherit; }
     .project-visual { min-height: 270px; }
     .brand-preview { min-height: 240px; }
     .lab-list li { grid-template-columns: 1fr; gap: 2px; padding: 10px 0; }
-    .back-to-top { right: max(14px, env(safe-area-inset-right)); bottom: calc(14px + env(safe-area-inset-bottom)); width: 52px; height: 52px; }
+    .back-to-top { right: max(14px, env(safe-area-inset-right)); bottom: calc(14px + env(safe-area-inset-bottom)); width: 52px; height: 52px; box-shadow: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
