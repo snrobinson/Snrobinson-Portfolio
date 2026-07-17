@@ -473,12 +473,15 @@ button { font: inherit; }
 .venture-note {
     display: grid;
     grid-template-columns: 0.75fr 1.25fr;
-    gap: clamp(28px, 5vw, 64px);
+    gap: 0;
     margin-top: 18px;
-    padding: clamp(24px, 4vw, 38px);
     border: 1px solid var(--line);
     background: color-mix(in srgb, var(--accent) 5%, var(--bg));
+    overflow: hidden;
 }
+
+.venture-note-visual { min-height: 300px; border-right: 1px solid var(--line); }
+.venture-note-content { display: flex; flex-direction: column; justify-content: center; gap: 22px; padding: clamp(24px, 4vw, 38px); }
 
 .venture-note-kicker {
     margin-bottom: 9px;
@@ -498,7 +501,7 @@ button { font: inherit; }
     letter-spacing: -0.025em;
 }
 
-.venture-note-logo { width: min(100%, 230px); height: auto; margin-bottom: 22px; border: 1px solid var(--line); object-fit: contain; }
+.venture-note-logo { width: min(76%, 250px); height: auto; object-fit: contain; }
 .venture-note-body p { max-width: 66ch; color: var(--prose); font-size: 15px; line-height: 1.7; }
 .venture-note-values { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 18px; list-style: none; }
 .venture-note-values li { padding: 6px 9px; border: 1px solid var(--line); color: var(--muted); font-family: var(--font-mono); font-size: 9px; }
@@ -677,7 +680,9 @@ button { font: inherit; }
         scrollbar-width: thin;
     }
     .snake-preview img { scroll-snap-align: start; }
-    .venture-note { grid-template-columns: 1fr; gap: 18px; }
+    .venture-note { grid-template-columns: 1fr; gap: 0; }
+    .venture-note-visual { min-height: 240px; border-right: none; border-bottom: 1px solid var(--line); }
+    .venture-note-content { gap: 20px; padding: 24px; }
     .venture-note h3 { max-width: none; }
     .agent-preview { margin-top: 20px; }
     .project-content { padding: 20px; }
