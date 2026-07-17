@@ -459,6 +459,38 @@ button { font: inherit; }
 .project-cta { min-height: 44px; display: inline-flex; align-items: center; gap: 8px; margin-top: auto; padding-top: 20px; border-bottom: 1px solid transparent; font-size: 14px; font-weight: 600; }
 .project-card:hover .project-cta { color: var(--accent); border-color: var(--accent); }
 
+.venture-note {
+    display: grid;
+    grid-template-columns: 0.75fr 1.25fr;
+    gap: clamp(28px, 5vw, 64px);
+    margin-top: 18px;
+    padding: clamp(24px, 4vw, 38px);
+    border: 1px solid var(--line);
+    background: color-mix(in srgb, var(--accent) 5%, var(--bg));
+}
+
+.venture-note-kicker {
+    margin-bottom: 9px;
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.venture-note h3 {
+    max-width: 16ch;
+    font-family: var(--font-display);
+    font-size: clamp(24px, 3vw, 34px);
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+}
+
+.venture-note-body p { max-width: 66ch; color: var(--prose); font-size: 15px; line-height: 1.7; }
+.venture-note-values { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 18px; list-style: none; }
+.venture-note-values li { padding: 6px 9px; border: 1px solid var(--line); color: var(--muted); font-family: var(--font-mono); font-size: 9px; }
+
 .lab-block {
     display: grid;
     grid-template-columns: 0.7fr 1.3fr;
@@ -612,6 +644,8 @@ button { font: inherit; }
         scrollbar-width: thin;
     }
     .snake-preview img { scroll-snap-align: start; }
+    .venture-note { grid-template-columns: 1fr; gap: 18px; }
+    .venture-note h3 { max-width: none; }
     .preview-grid { margin-top: 28px; }
     .project-content { padding: 20px; }
     .lab-block { grid-template-columns: 1fr; gap: 20px; margin-top: 32px; }
