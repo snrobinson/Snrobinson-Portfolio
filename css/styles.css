@@ -614,6 +614,101 @@ button { font: inherit; }
 .contact-links a { min-height: 44px; display: inline-flex; align-items: center; color: var(--muted); font-family: var(--font-mono); font-size: 12px; border-bottom: 1px solid transparent; }
 .contact-links a:hover { color: var(--accent); border-color: var(--accent); }
 
+/* Section progress rail */
+.scroll-rail {
+    position: fixed;
+    top: 50%;
+    right: max(28px, env(safe-area-inset-right));
+    z-index: 85;
+    width: 1px;
+    height: min(46vh, 420px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: opacity var(--transition), visibility var(--transition);
+}
+
+.scroll-rail.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.rail-track {
+    position: relative;
+    width: 1px;
+    height: 100%;
+    background: var(--line);
+}
+
+.rail-fill {
+    position: absolute;
+    inset: 0;
+    background: var(--accent);
+    transform: scaleY(0);
+    transform-origin: top center;
+    transition: transform 80ms linear;
+    will-change: transform;
+}
+
+.rail-tick {
+    position: absolute;
+    top: var(--tick-position, 0%);
+    right: -5px;
+    width: 140px;
+    min-height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 7px;
+    color: var(--faint);
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.04em;
+    text-transform: lowercase;
+    pointer-events: auto;
+    transform: translateY(-50%);
+    transition: color var(--transition);
+}
+
+.rail-tick::after {
+    content: '';
+    flex: 0 0 11px;
+    height: 1px;
+    background: var(--line);
+    transition: flex-basis var(--transition), background-color var(--transition);
+}
+
+.rail-tick-number,
+.rail-tick-name {
+    opacity: 0;
+    transform: translateX(4px);
+    transition: opacity var(--transition), transform var(--transition);
+}
+
+.rail-tick:hover,
+.rail-tick:focus-visible,
+.rail-tick.active {
+    color: var(--accent);
+}
+
+.rail-tick:hover::after,
+.rail-tick:focus-visible::after,
+.rail-tick.active::after {
+    flex-basis: 15px;
+    background: var(--accent);
+}
+
+.rail-tick:hover .rail-tick-number,
+.rail-tick:hover .rail-tick-name,
+.rail-tick:focus-visible .rail-tick-number,
+.rail-tick:focus-visible .rail-tick-name,
+.rail-tick.active .rail-tick-number,
+.rail-tick.active .rail-tick-name {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 /* Floating return control */
 .back-to-top {
     position: fixed;
@@ -654,6 +749,7 @@ button { font: inherit; }
 
 /* Responsive */
 @media (max-width: 900px) {
+    .scroll-rail { display: none; }
     .hero-grid { grid-template-columns: minmax(0, 1fr) 260px; }
     .hero-portrait figcaption { font-size: 9px; letter-spacing: 0.02em; }
     .section-grid,
