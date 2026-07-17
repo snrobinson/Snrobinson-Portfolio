@@ -52,7 +52,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
-    <link href="css/styles.css?v=20260717-13" rel="stylesheet">
+    <link href="css/styles.css?v=20260717-14" rel="stylesheet">
 
     <script type="application/ld+json">
     {
@@ -416,7 +416,7 @@
             </div>
         </section>
 
-        <section class="section builder-note" aria-labelledby="builder-title">
+        <section class="section builder-note" id="build-mode" aria-labelledby="builder-title">
             <div class="wrap builder-note-inner">
                 <span class="section-num">05</span>
                 <div>
@@ -476,6 +476,18 @@
         </section>
     </main>
 
+    <nav class="scroll-rail" id="scrollRail" aria-label="Section progress">
+        <div class="rail-track">
+            <span class="rail-fill" aria-hidden="true"></span>
+            <a class="rail-tick" href="#work"><span class="rail-tick-number">01</span><span class="rail-tick-name">work</span></a>
+            <a class="rail-tick" href="#about"><span class="rail-tick-number">02</span><span class="rail-tick-name">expertise</span></a>
+            <a class="rail-tick" href="#experience"><span class="rail-tick-number">03</span><span class="rail-tick-name">experience</span></a>
+            <a class="rail-tick" href="#credentials"><span class="rail-tick-number">04</span><span class="rail-tick-name">credentials</span></a>
+            <a class="rail-tick" href="#build-mode"><span class="rail-tick-number">05</span><span class="rail-tick-name">build mode</span></a>
+            <a class="rail-tick" href="#contact"><span class="rail-tick-number">06</span><span class="rail-tick-name">contact</span></a>
+        </div>
+    </nav>
+
     <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top" aria-hidden="true" tabindex="-1">
         <span class="back-to-top-arrow" aria-hidden="true">↑</span>
         <span class="back-to-top-label" aria-hidden="true">top</span>
@@ -488,7 +500,7 @@
         </div>
     </footer>
 
-    <script src="scripts/scripts.js?v=20260717-4"></script>
+    <script src="scripts/scripts.js?v=20260717-5"></script>
 </body>
 
 </html>

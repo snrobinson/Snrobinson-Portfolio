@@ -173,3 +173,85 @@
     window.addEventListener('scroll', update, { passive: true });
     update();
 })();
+
+// Proportional section progress rail.
+(function () {
+    var rail = document.getElementById('scrollRail');
+    if (!rail) return;
+
+    var fill = rail.querySelector('.rail-fill');
+    var ticks = Array.prototype.slice.call(rail.querySelectorAll('.rail-tick[href^="#"]'));
+    var activeOffset = 130;
+    var maxScroll = 1;
+    var scrollFrame = null;
+    var resizeFrame = null;
+
+    var targets = ticks.map(function (tick) {
+        var id = tick.getAttribute('href').slice(1);
+        var element = document.getElementById(id);
+        return element ? { tick: tick, element: element } : null;
+    }).filter(Boolean);
+
+    if (!fill || !targets.length) return;
+
+    var update = function () {
+        var scrollY = window.scrollY;
+        var progress = Math.min(1, Math.max(0, scrollY / maxScroll));
+        var position = scrollY + activeOffset;
+        var current = null;
+
+        fill.style.transform = 'scaleY(' + progress + ')';
+        rail.classList.toggle('visible', scrollY > 240);
+
+        targets.forEach(function (target) {
+            if (target.element.offsetTop <= position) current = target;
+        });
+
+        ticks.forEach(function (tick) {
+            tick.classList.remove('active');
+            tick.removeAttribute('aria-current');
+        });
+
+        if (current) {
+            current.tick.classList.add('active');
+            current.tick.setAttribute('aria-current', 'location');
+        }
+    };
+
+    var measure = function () {
+        var documentHeight = Math.max(
+            document.documentElement.scrollHeight,
+            document.body.scrollHeight
+        );
+        maxScroll = Math.max(1, documentHeight - window.innerHeight);
+
+        targets.forEach(function (target) {
+            var activationPoint = Math.max(0, target.element.offsetTop - activeOffset);
+            var tickPosition = Math.min(100, Math.max(0, activationPoint / maxScroll * 100));
+            target.tick.style.setProperty('--tick-position', tickPosition + '%');
+        });
+
+        update();
+    };
+
+    var requestUpdate = function () {
+        if (scrollFrame !== null) return;
+        scrollFrame = requestAnimationFrame(function () {
+            scrollFrame = null;
+            update();
+        });
+    };
+
+    var requestMeasure = function () {
+        if (resizeFrame !== null) return;
+        resizeFrame = requestAnimationFrame(function () {
+            resizeFrame = null;
+            measure();
+        });
+    };
+
+    window.addEventListener('scroll', requestUpdate, { passive: true });
+    window.addEventListener('resize', requestMeasure);
+    window.addEventListener('load', measure, { once: true });
+    measure();
+})();
