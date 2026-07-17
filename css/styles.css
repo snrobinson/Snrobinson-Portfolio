@@ -1,6 +1,7 @@
 /* Stephen Robinson — technical/editorial portfolio */
 
 :root {
+    color-scheme: dark;
     --bg: #0c0c0d;
     --bg-elevated: #121214;
     --bg-soft: rgba(255, 255, 255, 0.035);
@@ -24,6 +25,7 @@
 }
 
 [data-theme="light"] {
+    color-scheme: light;
     --bg: #f4f1ea;
     --bg-elevated: #faf8f3;
     --bg-soft: rgba(0, 0, 0, 0.035);
@@ -185,6 +187,8 @@ button { font: inherit; }
     background: transparent;
     border: 1px solid transparent;
     cursor: pointer;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
     transition: color var(--transition), border-color var(--transition), background-color var(--transition);
 }
 
@@ -615,10 +619,11 @@ button { font: inherit; }
 
     .nav-links {
         display: none;
-        position: absolute;
+        position: fixed;
         top: 66px;
         left: 0;
         right: 0;
+        z-index: 110;
         flex-direction: column;
         align-items: stretch;
         gap: 0;
@@ -626,19 +631,22 @@ button { font: inherit; }
         background: var(--bg);
         border-bottom: 1px solid var(--line);
         box-shadow: 0 16px 30px rgba(0, 0, 0, 0.18);
+        max-height: calc(100dvh - 66px);
+        overflow-y: auto;
     }
 
     .nav-links.open { display: flex; }
-    .nav-links a { min-height: 48px; font-size: 13px; }
+    .nav-links a { min-height: 52px; font-size: 13px; }
     .nav-links a::after { bottom: 5px; }
     .nav-toggle { display: inline-flex; }
+    body.nav-open { overflow: hidden; }
 
-    .hero { padding: 34px 0 50px; }
-    .hero-grid { position: relative; display: block; }
-    .hero-text { padding-top: 144px; }
-    .hero-portrait { position: absolute; top: 0; left: 0; width: 118px; }
-    .hero-portrait-frame::before { transform: translate(8px, 8px); }
-    .hero-portrait figcaption { display: none; }
+    .hero { padding: 30px 0 50px; }
+    .hero-grid { display: flex; flex-direction: column; align-items: stretch; gap: 30px; }
+    .hero-text { padding-top: 0; }
+    .hero-portrait { order: -1; width: min(100%, 320px); margin-inline: auto; }
+    .hero-portrait-frame::before { transform: translate(10px, 10px); }
+    .hero-portrait figcaption { display: block; margin-top: 18px; text-align: center; font-size: 9px; letter-spacing: 0.025em; }
     .kicker { margin-bottom: 16px; font-size: 10px; }
     .hero-h1 { margin-bottom: 18px; font-size: clamp(43px, 13vw, 58px); }
     .lead { font-size: 16px; }
