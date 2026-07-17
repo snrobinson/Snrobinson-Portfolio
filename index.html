@@ -4,34 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stephen Robinson — Lead Technical Program Manager</title>
-    <meta name="description" content="Stephen Robinson — Lead Technical Program Manager at NBCUniversal driving a $1.26M infrastructure modernization program projected to save $4M+. A decade delivering enterprise cloud, infrastructure, and security programs. PMP, CSM, M.S. in AI in progress. Available for consulting.">
+    <title>Stephen Robinson — Technical Program Leader &amp; Applied AI Builder</title>
+    <meta name="description" content="Stephen Robinson leads high-stakes enterprise technology programs and builds practical AI systems. Explore selected work, measurable outcomes, and consulting capabilities.">
     <meta name="author" content="Stephen Robinson">
     <link rel="canonical" href="https://www.snrobinson.com/">
 
-    <!-- Set theme before paint (dark is the default) -->
     <script>
         (function () {
+            var theme = 'dark';
             try {
-                var t = localStorage.getItem('theme') || 'dark';
-                document.documentElement.setAttribute('data-theme', t);
-            } catch (e) { document.documentElement.setAttribute('data-theme', 'dark'); }
+                var saved = localStorage.getItem('theme');
+                theme = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+            } catch (e) { }
+            document.documentElement.setAttribute('data-theme', theme);
         })();
     </script>
 
-    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Stephen Robinson">
-    <meta property="og:title" content="Stephen Robinson — Lead Technical Program Manager">
-    <meta property="og:description" content="Leading a $1.26M infrastructure modernization program projected to save $4M+. A decade delivering enterprise cloud, infrastructure & security programs. PMP · CSM · M.S. in AI in progress.">
+    <meta property="og:title" content="Stephen Robinson — Technical Program Leader &amp; Applied AI Builder">
+    <meta property="og:description" content="High-stakes enterprise delivery, applied AI, and measurable business outcomes.">
     <meta property="og:url" content="https://www.snrobinson.com/">
-    <meta property="og:image" content="https://www.snrobinson.com/images/og-image.png">
+    <meta property="og:image" content="https://www.snrobinson.com/images/og-image-v2.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Stephen Robinson — Lead Technical Program Manager">
-    <meta name="twitter:description" content="Leading a $1.26M program projected to save $4M+. Enterprise delivery meets applied AI.">
-    <meta name="twitter:image" content="https://www.snrobinson.com/images/og-image.png">
+    <meta name="twitter:title" content="Stephen Robinson — Technical Program Leader &amp; Applied AI Builder">
+    <meta name="twitter:description" content="High-stakes enterprise delivery, applied AI, and measurable business outcomes.">
+    <meta name="twitter:image" content="https://www.snrobinson.com/images/og-image-v2.png">
 
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
@@ -40,7 +40,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
 
     <script type="application/ld+json">
@@ -48,8 +48,8 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Stephen Robinson",
-        "jobTitle": "Lead Technical Program Manager",
-        "description": "Lead Technical Program Manager specializing in enterprise technology delivery, cloud and infrastructure modernization, cyber-security compliance, and applied AI.",
+        "jobTitle": "Technical Program Leader",
+        "description": "Technical program leader specializing in enterprise technology delivery, cloud and infrastructure modernization, cyber-security compliance, and applied AI.",
         "url": "https://www.snrobinson.com/",
         "email": "mailto:snrobinson94@gmail.com",
         "image": "https://www.snrobinson.com/images/stephen-robinson-headshot.jpg",
@@ -70,249 +70,223 @@
 </head>
 
 <body id="top">
-    <!-- Header -->
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
     <header class="site-header" id="siteHeader">
         <div class="wrap header-inner">
-            <a href="#top" class="wordmark">Stephen&nbsp;Robinson<span class="wordmark-mark">/</span></a>
-            <nav class="nav-links" id="navLinks">
-                <a href="#about">about</a>
-                <a href="#experience">experience</a>
+            <a href="#top" class="wordmark" aria-label="Stephen Robinson, home">Stephen&nbsp;Robinson<span class="wordmark-mark">/</span></a>
+            <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
                 <a href="#work">work</a>
+                <a href="#about">expertise</a>
+                <a href="#experience">experience</a>
                 <a href="#credentials">credentials</a>
                 <a href="#contact">contact</a>
             </nav>
             <div class="header-actions">
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">
-                    <svg class="icon-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-                    <svg class="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg>
+                <button class="theme-toggle" id="themeToggle" aria-label="Switch to light theme" title="Switch theme">
+                    <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg>
                 </button>
-                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">menu</button>
+                <button class="nav-toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks">menu</button>
             </div>
         </div>
     </header>
 
-    <main>
-        <!-- Hero -->
-        <section class="hero">
+    <main id="main-content">
+        <section class="hero" aria-labelledby="hero-title">
             <div class="wrap hero-grid">
                 <div class="hero-text">
-                    <p class="kicker"><span class="kicker-mark"></span>Lead Technical Program Manager · AI Delivery Leader · Consultant</p>
-                    <h1 class="hero-h1">Stephen<br>Robinson</h1>
-                    <p class="lead">I lead complex, high-stakes technology programs — bridging enterprise delivery and applied AI, and turning technical complexity into measurable business outcomes.</p>
-                    <p class="now"><span class="now-tag">Now</span> Leading a $1.26M infrastructure modernization program at NBCUniversal — projected to save $4M+ this year — while directing a team of project managers.</p>
-                    <div class="hero-actions">
-                        <a href="#work" class="link-arrow">View work <span aria-hidden="true">→</span></a>
-                        <a href="#contact" class="link-arrow">Get in touch <span aria-hidden="true">→</span></a>
-                        <a href="Stephen-Robinson-Resume.pdf" download class="link-arrow subtle">Resume <span aria-hidden="true">↓</span></a>
+                    <p class="kicker"><span class="kicker-mark"></span>Technical program leader · Applied AI builder</p>
+                    <h1 class="hero-h1" id="hero-title">Complex programs.<br><span>Clear outcomes.</span></h1>
+                    <p class="lead">I'm Stephen Robinson. I lead high-stakes enterprise technology programs and build practical AI systems that turn complexity into measurable business value.</p>
+                    <p class="now"><span class="now-tag">Now</span> Leading a $1.26M infrastructure modernization program at NBCUniversal, projected to save $4M+ this year.</p>
+                    <div class="hero-actions" aria-label="Featured actions">
+                        <a href="#work" class="button button-primary">View case studies <span aria-hidden="true">↓</span></a>
+                        <a href="#contact" class="button button-secondary">Start a conversation <span aria-hidden="true">↗</span></a>
+                        <a href="Stephen-Robinson-Resume.pdf" download class="text-link">Résumé <span aria-hidden="true">↓</span></a>
                     </div>
                 </div>
                 <figure class="hero-portrait">
-                    <img src="images/stephen-robinson-headshot.jpg" alt="Stephen Robinson" width="340" height="340" fetchpriority="high">
+                    <img src="images/stephen-robinson-headshot.jpg" alt="Portrait of Stephen Robinson" width="720" height="720" fetchpriority="high">
+                    <figcaption>Enterprise delivery · Cloud · Security · AI</figcaption>
                 </figure>
             </div>
         </section>
 
-        <!-- Stat strip -->
-        <div class="stat-strip">
+        <div class="stat-strip" aria-label="Selected career outcomes">
             <div class="wrap stat-strip-inner">
-                <div class="stat"><span class="stat-n">10</span><span class="stat-l">years in enterprise tech</span></div>
-                <div class="stat"><span class="stat-n">$1M+</span><span class="stat-l">program portfolio</span></div>
-                <div class="stat"><span class="stat-n">20+</span><span class="stat-l">teams coordinated</span></div>
-                <div class="stat"><span class="stat-n">$4M+</span><span class="stat-l">projected savings, current program</span></div>
+                <div class="stat"><span class="stat-n">10</span><span class="stat-l">years in enterprise technology</span></div>
+                <div class="stat"><span class="stat-n">$1.26M</span><span class="stat-l">current modernization program</span></div>
+                <div class="stat"><span class="stat-n">20+</span><span class="stat-l">teams aligned across delivery</span></div>
+                <div class="stat"><span class="stat-n">$4M+</span><span class="stat-l">projected current-year savings</span></div>
             </div>
         </div>
 
-        <!-- 01 About -->
+        <section class="section work-section" id="work">
+            <div class="wrap">
+                <div class="section-heading-row">
+                    <div class="section-aside horizontal">
+                        <span class="section-num">01</span>
+                        <h2 class="section-label">Selected work</h2>
+                    </div>
+                    <p class="section-intro">Systems and services that show how I think, build, and deliver.</p>
+                </div>
+
+                <div class="project-grid">
+                    <article class="project-card project-featured">
+                        <a href="jarvis/" class="project-link" aria-label="Read the JARVIS case study">
+                            <div class="project-visual jarvis-preview" aria-hidden="true">
+                                <div class="preview-topline"><span>JARVIS / DAILY BRIEF</span><span class="status-live">LIVE</span></div>
+                                <div class="preview-grid">
+                                    <div class="preview-panel preview-priority">
+                                        <span class="preview-label">Priority</span>
+                                        <strong>Prepare modernization steering update</strong>
+                                        <span>3 decisions · 2 risks</span>
+                                    </div>
+                                    <div class="preview-panel">
+                                        <span class="preview-label">Calendar</span>
+                                        <strong>5 meetings</strong>
+                                        <span>First at 9:00 AM</span>
+                                    </div>
+                                    <div class="preview-panel">
+                                        <span class="preview-label">Signals</span>
+                                        <strong>12 items</strong>
+                                        <span>Email · Projects · Finance</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-eyebrow"><span>Personal AI system</span><span>Active use</span></div>
+                                <h3>JARVIS</h3>
+                                <p>A personal executive assistant that connects email, calendar, finances, and project context into one decision-support layer.</p>
+                                <ul class="project-proof" aria-label="JARVIS highlights">
+                                    <li>6+ integrated data sources</li>
+                                    <li>Model-agnostic architecture</li>
+                                    <li>Daily briefings and proactive signals</li>
+                                </ul>
+                                <span class="project-cta">Read case study <span aria-hidden="true">↗</span></span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="project-card consulting-card">
+                        <a href="https://www.robinson-consulting-group.com" target="_blank" rel="noopener" class="project-link" aria-label="Visit Robinson Consulting Group in a new tab">
+                            <div class="project-visual consulting-preview" aria-hidden="true">
+                                <span>STRATEGY</span><i>→</i><span>SYSTEM</span><i>→</i><span>ADOPTION</span>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-eyebrow"><span>Consulting</span><span>Live</span></div>
+                                <h3>Robinson Consulting Group</h3>
+                                <p>Professional services and education that help organizations translate emerging technology into practical, human-centered execution.</p>
+                                <span class="project-cta">Visit site <span aria-hidden="true">↗</span></span>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+
+                <div class="lab-block">
+                    <div>
+                        <p class="lab-kicker">In the lab</p>
+                        <p class="lab-intro">Smaller product experiments currently moving from concept to prototype.</p>
+                    </div>
+                    <ul class="lab-list">
+                        <li><span>Daily Anchor</span><small>Relationship-building app · iOS</small></li>
+                        <li><span>LevelUP</span><small>Motivational word game · iOS</small></li>
+                        <li><span>Retro Snake</span><small>Classic arcade experiment · iOS</small></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
         <section class="section" id="about">
             <div class="wrap section-grid">
                 <div class="section-aside">
-                    <span class="section-num">01</span>
-                    <h2 class="section-label">About</h2>
+                    <span class="section-num">02</span>
+                    <h2 class="section-label">Expertise</h2>
                 </div>
                 <div class="section-main">
-                    <p class="statement">From hands-on engineering to program leadership.</p>
-                    <p class="prose">I'm a Lead Technical Program Manager at NBCUniversal with 10 years of enterprise delivery experience, bridging program execution and applied AI. Today I lead a team of project managers on high-stakes infrastructure, cloud, and security programs — bringing structure to ambiguity and turning technical complexity into measurable outcomes.</p>
-                    <p class="prose">I started my career writing code, migrating databases, and troubleshooting infrastructure. That technical foundation is what makes me different as a program leader — I don't just manage timelines, I understand the systems, the trade-offs, and the decisions behind them.</p>
-                    <p class="prose">Over the past decade I've worked across the full spectrum of enterprise technology: cloud and infrastructure modernization at NBCUniversal, process-automation consulting at DocuPhase, and custom solution delivery at Fairfax Software. Now I focus on leading large-scale programs, implementing AI-driven solutions, and helping organizations turn technical complexity into competitive advantage — inside the enterprise and through independent consulting.</p>
+                    <p class="statement">Technical depth, translated into delivery leadership.</p>
+                    <p class="prose">I started my career writing code, migrating databases, and troubleshooting infrastructure. That foundation now helps me lead complex programs with a practical understanding of systems, trade-offs, and the decisions behind the plan.</p>
+                    <p class="prose">Today I bring structure to ambiguous, cross-functional work spanning infrastructure modernization, cloud, cyber-security compliance, and applied AI.</p>
 
                     <dl class="capabilities">
                         <div class="cap">
                             <dt>Enterprise program leadership</dt>
-                            <dd>End-to-end delivery of multi-million-dollar technology programs — currently leading a team of PMs on a $1.26M initiative projected to save $4M+, keeping complex work on track through constant scope, schedule, and budget change.</dd>
+                            <dd>End-to-end governance for high-stakes programs with changing scope, schedules, budgets, and executive priorities.</dd>
                         </div>
                         <div class="cap">
-                            <dt>Cloud, infrastructure &amp; cyber compliance</dt>
-                            <dd>Modernizing servers and platforms, retiring tech debt, and closing cyber-security gaps across AWS, Azure, and GCP environments at enterprise scale.</dd>
+                            <dt>Cloud, infrastructure &amp; security</dt>
+                            <dd>Modernizing platforms, retiring technical debt, and closing compliance gaps across AWS, Azure, and GCP environments.</dd>
                         </div>
                         <div class="cap">
                             <dt>Applied AI &amp; automation</dt>
-                            <dd>Translating emerging AI/ML capabilities into executable business solutions with measurable ROI — from workflow automation to AI decision-support systems I build and run myself.</dd>
+                            <dd>Turning emerging AI capabilities into useful workflows, decision-support systems, and measurable operating improvements.</dd>
                         </div>
                         <div class="cap">
-                            <dt>Stakeholder &amp; vendor management</dt>
-                            <dd>Translating technical complexity into executive-ready communication, and aligning 20+ cross-functional engineering, cyber, and operations teams toward shared goals.</dd>
+                            <dt>Executive alignment</dt>
+                            <dd>Making complex technical decisions legible to leaders while coordinating engineering, cyber, operations, and vendor teams.</dd>
                         </div>
                     </dl>
                 </div>
             </div>
         </section>
 
-        <!-- 02 Experience -->
         <section class="section" id="experience">
             <div class="wrap section-grid">
                 <div class="section-aside">
-                    <span class="section-num">02</span>
+                    <span class="section-num">03</span>
                     <h2 class="section-label">Experience</h2>
                 </div>
                 <div class="section-main">
                     <ol class="xp-list">
-
                         <li class="xp">
                             <div class="xp-meta">
                                 <span class="xp-co">NBCUniversal</span>
-                                <span class="xp-date">Feb 2022 — Present</span>
+                                <span class="xp-date">2022 — Present</span>
                             </div>
                             <div class="xp-body">
                                 <h3 class="xp-role">Engineering Project Manager, Technology PMO</h3>
                                 <ul class="xp-points">
-                                    <li>Lead the enterprise Infrastructure Software Upgrade Program — a <em>$1.26M initiative</em> retiring tech debt and bringing servers and platforms into cyber-security compliance, <em>projected to save $4M+ this year</em> — directing a team of project managers</li>
-                                    <li>Deliver a <em>$1M+ portfolio</em> of infrastructure, cloud, and security programs (network vacates, platform upgrades, cloud migrations, ServiceNow, BeyondTrust), coordinating <em>20+ engineering, cyber, and operations teams</em> and keeping delivery on track through shifting scope, schedule, and priorities</li>
-                                    <li>Lead the multi-year Evertz Mediator Release Management program — 3–5 releases annually across 50–100 regression cycles — cutting deployment defects <em>25–35% YoY</em> through improved planning and QA alignment</li>
-                                    <li>Govern 30+ simultaneous workstreams with structured RAID practices, improving risk visibility and mitigation speed <em>~40%</em> for senior-leadership decisions</li>
+                                    <li>Lead a <em>$1.26M infrastructure software upgrade program</em> projected to save $4M+ this year, directing a team of project managers.</li>
+                                    <li>Coordinate <em>20+ engineering, cyber, and operations teams</em> across a $1M+ portfolio of infrastructure, cloud, and security programs.</li>
+                                    <li>Improved risk visibility and mitigation speed by <em>approximately 40%</em> through structured governance across 30+ workstreams.</li>
                                 </ul>
-                                <p class="xp-tags">Program Leadership · Cyber Compliance · Agile/Scrum · Waterfall · Cloud &amp; Infrastructure</p>
+                                <p class="xp-tags">Program leadership · Cyber compliance · Cloud infrastructure · RAID governance</p>
                             </div>
                         </li>
 
                         <li class="xp">
                             <div class="xp-meta">
                                 <span class="xp-co">NBCUniversal</span>
-                                <span class="xp-date">Sep 2019 — Feb 2022</span>
+                                <span class="xp-date">2019 — 2022</span>
                             </div>
                             <div class="xp-body">
                                 <h3 class="xp-role">Technical Business Systems Analyst</h3>
                                 <ul class="xp-points">
-                                    <li>Managed server operations and application lifecycle for Universal Brand Development, sustaining <em>24/7 availability across global business units</em></li>
-                                    <li>Partnered with Engineering, Operations, and Technology teams to streamline workflows and improve release reliability across the application suite</li>
-                                    <li>Owned the annual financial plan — CAPEX/OPEX pacing, forecasting, and budget alignment across technology initiatives</li>
+                                    <li>Managed server operations and application lifecycle for Universal Brand Development, supporting 24/7 availability across global business units.</li>
+                                    <li>Owned annual CAPEX/OPEX planning and partnered across engineering and operations to improve release reliability.</li>
                                 </ul>
-                                <p class="xp-tags">Server Operations · Business Systems · Financial Planning · Operations</p>
+                                <p class="xp-tags">Server operations · Business systems · Financial planning</p>
                             </div>
                         </li>
 
-                        <li class="xp">
+                        <li class="xp xp-earlier">
                             <div class="xp-meta">
-                                <span class="xp-co">DocuPhase</span>
-                                <span class="xp-date">Oct 2018 — Sep 2019</span>
+                                <span class="xp-co">DocuPhase + Fairfax Software</span>
+                                <span class="xp-date">2016 — 2019</span>
                             </div>
                             <div class="xp-body">
-                                <h3 class="xp-role">Process Improvement Consultant</h3>
-                                <ul class="xp-points">
-                                    <li>Architected and deployed custom workflow automation across accounts payable, procurement, and document management — reducing manual processing time and improving efficiency</li>
-                                    <li>Built client-facing workflow interfaces in HTML, CSS, and JavaScript, translating business requirements into intuitive software</li>
-                                    <li>Engineered backend database solutions with advanced SQL for data integration, reporting, and workflow logic</li>
-                                </ul>
-                                <p class="xp-tags">Process Automation · HTML/CSS/JS · SQL · Workflow Design</p>
+                                <h3 class="xp-role">Consulting, business analysis &amp; solution delivery</h3>
+                                <p class="xp-summary">Designed workflow automation, built client-facing interfaces, delivered document-management systems, and executed complex data migrations across healthcare, financial services, and government clients.</p>
+                                <p class="xp-tags">Process automation · HTML/CSS/JS · SQL · ETL · Client delivery</p>
                             </div>
                         </li>
-
-                        <li class="xp">
-                            <div class="xp-meta">
-                                <span class="xp-co">Fairfax Software</span>
-                                <span class="xp-date">Aug 2016 — Oct 2018</span>
-                            </div>
-                            <div class="xp-body">
-                                <h3 class="xp-role">Business Analyst</h3>
-                                <ul class="xp-points">
-                                    <li>Delivered end-to-end Quick Modules imaging solutions across healthcare, financial-services, and government clients — requirements gathering through production deployment</li>
-                                    <li>Traveled nationwide to run business-process analysis and stakeholder workshops, identifying automation opportunities</li>
-                                    <li>Configured custom document-management systems with rigorous QA testing and user training</li>
-                                </ul>
-                                <p class="xp-tags">Business Analysis · Requirements Gathering · Client Engagement · QA</p>
-                            </div>
-                        </li>
-
-                        <li class="xp">
-                            <div class="xp-meta">
-                                <span class="xp-co">Fairfax Software</span>
-                                <span class="xp-date">Apr 2016 — Aug 2016</span>
-                            </div>
-                            <div class="xp-body">
-                                <h3 class="xp-role">Data Migration Intern</h3>
-                                <ul class="xp-points">
-                                    <li>Migrated large datasets from legacy systems via ETL (mapping, extraction, transformation, loading), ensuring integrity and business alignment</li>
-                                    <li>Diagnosed and resolved errors across Microsoft SQL Server R2 with senior DBAs, and documented migration procedures for audit readiness</li>
-                                </ul>
-                                <p class="xp-tags">ETL · SQL Server · Data Migration</p>
-                            </div>
-                        </li>
-
                     </ol>
+                    <a href="Stephen-Robinson-Resume.pdf" download class="text-link resume-link">Download full résumé <span aria-hidden="true">↓</span></a>
                 </div>
             </div>
         </section>
 
-        <!-- 03 Selected Work -->
-        <section class="section" id="work">
-            <div class="wrap section-grid">
-                <div class="section-aside">
-                    <span class="section-num">03</span>
-                    <h2 class="section-label">Selected Work</h2>
-                </div>
-                <div class="section-main">
-                    <ol class="work-list">
-
-                        <li>
-                            <a href="jarvis/" class="work-row">
-                                <span class="work-name">JARVIS</span>
-                                <span class="work-meta">AI · Live</span>
-                                <span class="work-desc">A personal AI executive assistant and life command center — integrating email, calendar, finances, and project management into a single intelligent layer across 6+ data sources.</span>
-                                <span class="work-arrow" aria-hidden="true">↗</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="https://www.robinson-consulting-group.com" target="_blank" rel="noopener" class="work-row">
-                                <span class="work-name">Robinson Consulting Group</span>
-                                <span class="work-meta">Consulting · Live</span>
-                                <span class="work-desc">Professional services, consulting, and educational material bridging the gap between technology and people.</span>
-                                <span class="work-arrow" aria-hidden="true">↗</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <div class="work-row work-row-static">
-                                <span class="work-name">Daily Anchor</span>
-                                <span class="work-meta">iOS · In development</span>
-                                <span class="work-desc">A couple's and relationship-building app designed to strengthen connections through daily intentional engagement.</span>
-                                <span class="work-arrow" aria-hidden="true"></span>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="work-row work-row-static">
-                                <span class="work-name">LevelUP</span>
-                                <span class="work-meta">iOS · In development</span>
-                                <span class="work-desc">A motivational word-puzzle game that challenges players to level up their vocabulary and mindset.</span>
-                                <span class="work-arrow" aria-hidden="true"></span>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="work-row work-row-static">
-                                <span class="work-name">Retro Snake</span>
-                                <span class="work-meta">iOS · In development</span>
-                                <span class="work-desc">A retro snake game built for iOS, bringing the classic arcade experience to modern mobile devices.</span>
-                                <span class="work-arrow" aria-hidden="true"></span>
-                            </div>
-                        </li>
-
-                    </ol>
-                </div>
-            </div>
-        </section>
-
-        <!-- 04 Credentials -->
         <section class="section" id="credentials">
             <div class="wrap section-grid">
                 <div class="section-aside">
@@ -321,118 +295,59 @@
                 </div>
                 <div class="section-main">
                     <ul class="cred-list">
-                        <li class="cred">
-                            <span class="cred-name">M.S. Artificial Intelligence</span>
-                            <span class="cred-org">Penn State University</span>
-                            <span class="cred-status">In progress · 2028</span>
-                        </li>
-                        <li class="cred">
-                            <span class="cred-name">B.S. Information Technology</span>
-                            <span class="cred-org">University of South Florida</span>
-                            <span class="cred-status">2017</span>
-                        </li>
-                        <li class="cred">
-                            <span class="cred-name">Project Management Professional (PMP)</span>
-                            <span class="cred-org">Project Management Institute</span>
-                            <span class="cred-status">Active · Exp. 2027</span>
-                        </li>
-                        <li class="cred">
-                            <span class="cred-name">Certified ScrumMaster (CSM)</span>
-                            <span class="cred-org">Scrum Alliance</span>
-                            <span class="cred-status">Active · Exp. 2027</span>
-                        </li>
-                        <li class="cred">
-                            <span class="cred-name">CompTIA Cloud+</span>
-                            <span class="cred-org">CompTIA</span>
-                            <span class="cred-status">Active · Exp. 2027</span>
-                        </li>
-                        <li class="cred cred-prior">
-                            <span class="cred-name">AWS Solutions Architect – Associate</span>
-                            <span class="cred-org">Amazon Web Services</span>
-                            <span class="cred-status">Previously held · 2020–2024</span>
-                        </li>
+                        <li class="cred"><span class="cred-name">M.S. Artificial Intelligence</span><span class="cred-org">Penn State University</span><span class="cred-status">In progress · 2028</span></li>
+                        <li class="cred"><span class="cred-name">Project Management Professional (PMP)</span><span class="cred-org">Project Management Institute</span><span class="cred-status">Active · Exp. 2027</span></li>
+                        <li class="cred"><span class="cred-name">Certified ScrumMaster (CSM)</span><span class="cred-org">Scrum Alliance</span><span class="cred-status">Active · Exp. 2027</span></li>
+                        <li class="cred"><span class="cred-name">CompTIA Cloud+</span><span class="cred-org">CompTIA</span><span class="cred-status">Active · Exp. 2027</span></li>
+                        <li class="cred"><span class="cred-name">B.S. Information Technology</span><span class="cred-org">University of South Florida</span><span class="cred-status">2017</span></li>
+                        <li class="cred cred-prior"><span class="cred-name">AWS Solutions Architect – Associate</span><span class="cred-org">Amazon Web Services</span><span class="cred-status">Previously held · 2020–2024</span></li>
                     </ul>
-                </div>
-            </div>
-        </section>
 
-        <!-- 05 Toolkit -->
-        <section class="section" id="toolkit">
-            <div class="wrap section-grid">
-                <div class="section-aside">
-                    <span class="section-num">05</span>
-                    <h2 class="section-label">Toolkit</h2>
-                </div>
-                <div class="section-main">
-                    <div class="toolkit">
-                        <div class="tk-group">
-                            <span class="tk-label">Cloud &amp; Infrastructure</span>
-                            <p class="tk-items">AWS · Azure · GCP · SaaS Platforms · CI/CD · Load Balancing · Dev/QA/Staging</p>
-                        </div>
-                        <div class="tk-group">
-                            <span class="tk-label">Program Management</span>
-                            <p class="tk-items">Jira · Confluence · RAID Governance · Change Management · FMEA · Six Sigma / DMAIC</p>
-                        </div>
-                        <div class="tk-group">
-                            <span class="tk-label">Data &amp; Analytics</span>
-                            <p class="tk-items">SQL · Data Modeling · Dashboards · Business Intelligence</p>
-                        </div>
-                        <div class="tk-group">
-                            <span class="tk-label">Development</span>
-                            <p class="tk-items">Python · JavaScript · C# · .NET · HTML / CSS · Git</p>
-                        </div>
-                        <div class="tk-group">
-                            <span class="tk-label">AI &amp; Automation</span>
-                            <p class="tk-items">AI Implementation · Workflow Automation · Process Optimization · Prompt Engineering · MCP</p>
-                        </div>
+                    <div class="toolkit-compact" aria-labelledby="toolkit-title">
+                        <h3 id="toolkit-title">Working toolkit</h3>
+                        <p>AWS · Azure · GCP · Jira · Confluence · ServiceNow · SQL · Python · JavaScript · C# · .NET · Git · MCP · Workflow automation · Prompt engineering</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 06 Beyond Work -->
-        <section class="section" id="beyond">
-            <div class="wrap section-grid">
-                <div class="section-aside">
-                    <span class="section-num">06</span>
-                    <h2 class="section-label">Beyond Work</h2>
-                </div>
-                <div class="section-main">
-                    <div class="beyond">
-                        <div class="beyond-item">
-                            <h3>Building with AI</h3>
-                            <p>I'm genuinely obsessed with how AI is reshaping work and life — and beyond reading about it, I build it. JARVIS, my personal AI operating system, started as a side project and became a daily necessity.</p>
-                        </div>
-                        <div class="beyond-item">
-                            <h3>Entrepreneurship</h3>
-                            <p>I can't not build things. Robinson Consulting Group, Robinson Business Ventures, iOS apps, AI tools — I'm always in build mode. If there's a problem worth solving, I'd rather create the solution than wait for one.</p>
-                        </div>
-                        <div class="beyond-item">
-                            <h3>Lifelong learning</h3>
-                            <p>PMP, CSM, CompTIA Cloud+, a former AWS Solutions Architect — and now a Master's in AI at Penn State. My bookshelf and my transcript tell the same story: the learning never stops.</p>
-                        </div>
-                        <div class="beyond-item">
-                            <h3>Shipping real products</h3>
-                            <p>There's something uniquely satisfying about shipping software people actually use — from retro games to relationship apps to AI assistants. I love the full arc from idea to product in real hands.</p>
-                        </div>
-                    </div>
+        <section class="section builder-note" aria-labelledby="builder-title">
+            <div class="wrap builder-note-inner">
+                <span class="section-num">05</span>
+                <div>
+                    <h2 id="builder-title">Always in build mode.</h2>
+                    <p>Alongside enterprise delivery, I'm completing a master's in AI, building JARVIS, developing small iOS products, and growing an independent consulting practice. The common thread is simple: learn deeply, make the system clearer, and ship something useful.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Contact -->
         <section class="section contact" id="contact">
             <div class="wrap">
-                <span class="section-num">07</span>
-                <h2 class="contact-h">Let's talk.</h2>
-                <p class="contact-lead">Whether you're hiring a senior technical program manager, exploring AI implementation for your organization, or need consulting support for a complex initiative — I'd welcome the conversation.</p>
-                <a href="mailto:snrobinson94@gmail.com" class="contact-email">snrobinson94@gmail.com <span aria-hidden="true">↗</span></a>
-                <nav class="contact-links">
-                    <a href="https://www.linkedin.com/in/stephen-robinson-877ab46b/" target="_blank" rel="noopener">LinkedIn</a>
-                    <a href="https://github.com/snrobinson" target="_blank" rel="noopener">GitHub</a>
-                    <a href="https://www.robinson-consulting-group.com" target="_blank" rel="noopener">Robinson Consulting Group</a>
-                    <a href="Stephen-Robinson-Resume.pdf" download>Résumé</a>
-                </nav>
+                <span class="section-num">06</span>
+                <h2 class="contact-h">Let's build clarity.</h2>
+                <p class="contact-lead">Choose the conversation that fits. I'm open to senior technical program leadership opportunities and select consulting engagements focused on delivery, AI implementation, and complex technology initiatives.</p>
+
+                <div class="contact-paths">
+                    <a href="mailto:snrobinson94@gmail.com?subject=Leadership%20opportunity" class="contact-path">
+                        <span class="contact-path-label">Hiring &amp; leadership</span>
+                        <strong>Discuss an opportunity</strong>
+                        <span aria-hidden="true">↗</span>
+                    </a>
+                    <a href="https://www.robinson-consulting-group.com" target="_blank" rel="noopener" class="contact-path">
+                        <span class="contact-path-label">Consulting &amp; AI delivery</span>
+                        <strong>Explore consulting</strong>
+                        <span aria-hidden="true">↗</span>
+                    </a>
+                </div>
+
+                <div class="contact-direct">
+                    <a href="mailto:snrobinson94@gmail.com" class="contact-email">snrobinson94@gmail.com <span aria-hidden="true">↗</span></a>
+                    <nav class="contact-links" aria-label="Social and profile links">
+                        <a href="https://www.linkedin.com/in/stephen-robinson-877ab46b/" target="_blank" rel="noopener">LinkedIn <span class="sr-only">(opens in a new tab)</span></a>
+                        <a href="https://github.com/snrobinson" target="_blank" rel="noopener">GitHub <span class="sr-only">(opens in a new tab)</span></a>
+                        <a href="Stephen-Robinson-Resume.pdf" download>Résumé</a>
+                    </nav>
+                </div>
             </div>
         </section>
     </main>
@@ -440,7 +355,7 @@
     <footer class="footer">
         <div class="wrap footer-inner">
             <span>© 2026 Stephen Robinson</span>
-            <span class="footer-loc">Built &amp; maintained by hand</span>
+            <a href="#top">Back to top ↑</a>
         </div>
     </footer>
 
