@@ -431,7 +431,13 @@ button { font: inherit; }
     align-items: center;
     justify-content: center;
     padding: 24px;
-    background: #f6f7f9;
+    background: #f1efe9;
+}
+
+/* Logos ship with light backgrounds, so keep a light tile but dim it in dark
+   mode so it reads as a framed panel instead of glaring on near-black. */
+[data-theme="dark"] .brand-preview {
+    filter: brightness(0.87);
 }
 
 .brand-preview img { width: min(76%, 250px); height: auto; object-fit: contain; }

@@ -16,8 +16,18 @@
         history.replaceState(null, '', window.location.pathname + window.location.search);
     }
 
+    // Stop resetting the moment the visitor takes control, so the late
+    // resets that defeat scroll restoration never yank an active reader.
+    // (Programmatic scrollTo fires 'scroll', so it is intentionally not a
+    // cancel trigger — only genuine user intent counts.)
+    var cancelled = false;
+    var cancel = function () { cancelled = true; };
+    ['wheel', 'touchstart', 'pointerdown', 'keydown'].forEach(function (evt) {
+        window.addEventListener(evt, cancel, { once: true, passive: true });
+    });
+
     var reset = function () {
-        window.scrollTo(0, 0);
+        if (!cancelled) window.scrollTo(0, 0);
     };
 
     reset();
@@ -26,7 +36,7 @@
     requestAnimationFrame(function () {
         requestAnimationFrame(reset);
     });
-    [100, 250, 500, 1000].forEach(function (delay) {
+    [100, 250, 500].forEach(function (delay) {
         window.setTimeout(reset, delay);
     });
 })();
