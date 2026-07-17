@@ -33,6 +33,27 @@
     applyTheme(override || (systemTheme.matches ? 'dark' : 'light'));
 })();
 
+// Floating return-to-top control.
+(function () {
+    var control = document.getElementById('backToTop');
+    if (!control) return;
+
+    var update = function () {
+        var visible = window.scrollY > 240;
+        control.classList.toggle('visible', visible);
+        control.setAttribute('aria-hidden', visible ? 'false' : 'true');
+        control.setAttribute('tabindex', visible ? '0' : '-1');
+    };
+
+    control.addEventListener('click', function () {
+        var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+    });
+
+    window.addEventListener('scroll', update, { passive: true });
+    update();
+})();
+
 // Sticky-header divider.
 (function () {
     var header = document.getElementById('siteHeader');
