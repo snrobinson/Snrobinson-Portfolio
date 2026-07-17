@@ -537,10 +537,12 @@ button { font: inherit; }
 .xp:first-child { padding-top: 0; border-top: none; }
 .xp-meta { display: flex; flex-direction: column; gap: 5px; }
 .xp-brand { display: grid; grid-template-columns: 50px minmax(0, 1fr); gap: 12px; align-items: center; margin-bottom: 4px; }
+.xp-brand--nbcu { grid-template-columns: minmax(0, 200px); }
 .xp-company-copy { min-width: 0; display: flex; flex-direction: column; gap: 1px; }
 .xp-logo { width: 50px; height: 50px; display: grid; place-items: center; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: #0a0a0c; }
 .xp-logo img { width: 38px; height: 38px; max-width: none; object-fit: contain; }
-.xp-logo--nbcu img { width: auto; height: 30px; justify-self: start; }
+.xp-logo--nbcu { width: 200px; padding: 10px 12px; }
+.xp-logo--nbcu img { width: 100%; height: auto; max-width: 100%; }
 .xp-logo--onphase img { width: 44px; height: 44px; transform: scale(1.2); }
 .xp-logo--fairfax img { width: 40px; height: 40px; }
 .xp-co { font-family: var(--font-display); font-size: 16px; font-weight: 500; line-height: 1.4; }
