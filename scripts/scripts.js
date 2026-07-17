@@ -1,3 +1,36 @@
+// Reloads always begin at the top without overriding intentional hash navigation.
+(function () {
+    var navigation = null;
+    if (window.performance && performance.getEntriesByType) {
+        navigation = performance.getEntriesByType('navigation')[0] || null;
+    }
+
+    var reloaded = navigation
+        ? navigation.type === 'reload'
+        : !!(window.performance && performance.navigation && performance.navigation.type === 1);
+
+    if (!reloaded) return;
+
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    if (window.location.hash) {
+        history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
+
+    var reset = function () {
+        window.scrollTo(0, 0);
+    };
+
+    reset();
+    window.addEventListener('load', reset, { once: true });
+    window.addEventListener('pageshow', reset, { once: true });
+    requestAnimationFrame(function () {
+        requestAnimationFrame(reset);
+    });
+    [100, 250, 500, 1000].forEach(function (delay) {
+        window.setTimeout(reset, delay);
+    });
+})();
+
 // Theme preference and accessible toggle state.
 (function () {
     var toggle = document.getElementById('themeToggle');
