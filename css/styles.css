@@ -853,6 +853,13 @@ button { font: inherit; }
     .contact-links { justify-content: flex-start; }
 }
 
+/* Wide phones (e.g. iPhone Duo unfolded): keep the hero side by side */
+@media (min-width: 561px) and (max-width: 760px) {
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) 200px; gap: 32px; align-items: center; }
+    .hero-portrait { order: 0; width: auto; margin-inline: 0; }
+    .hero-h1 { font-size: clamp(48px, 9vw, 60px); }
+}
+
 @media (max-width: 420px) {
     .wordmark { font-size: 12px; }
     .header-actions { gap: 2px; }
