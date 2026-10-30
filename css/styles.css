@@ -750,8 +750,12 @@ button { font: inherit; }
 .footer-inner a:hover { color: var(--accent); }
 
 /* Responsive */
-@media (max-width: 900px) {
+/* The rail sits in the page margin; below this width it overlaps the content */
+@media (max-width: 1279px) {
     .scroll-rail { display: none; }
+}
+
+@media (max-width: 900px) {
     .hero-grid { grid-template-columns: minmax(0, 1fr) 260px; }
     .hero-portrait figcaption { font-size: 9px; letter-spacing: 0.02em; }
     .section-grid,
