@@ -755,6 +755,18 @@ button { font: inherit; }
     .scroll-rail { display: none; }
 }
 
+/* Tablets and small laptops: widen the gutter so the top button sits beside the text, not on it */
+@media (min-width: 761px) and (max-width: 1279px) {
+    :root { --gutter: 64px; }
+    .back-to-top {
+        right: max(12px, env(safe-area-inset-right));
+        bottom: calc(14px + env(safe-area-inset-bottom));
+        width: 44px;
+        height: 44px;
+    }
+    .back-to-top-arrow { font-size: 18px; }
+}
+
 @media (max-width: 900px) {
     .hero-grid { grid-template-columns: minmax(0, 1fr) 260px; }
     .hero-portrait figcaption { font-size: 9px; letter-spacing: 0.02em; }
